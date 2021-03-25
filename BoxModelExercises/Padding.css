@@ -1,0 +1,17 @@
+body > p {
+    background-color: yellow;
+    border: 5px thick;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.p1, .p3 {
+    border-color: red;
+    border-style: dashed;
+    padding: 50px;
+}
+
+.p2 {
+    border: solid green;
+    padding-top: 50px;
+}

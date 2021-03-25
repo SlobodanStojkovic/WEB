@@ -1,0 +1,20 @@
+#first-paragraph {
+    color: darkturquoise;
+    opacity: 50%;
+}
+
+#second-paragraph {
+    color: rgb(0, 206, 209, 0.5);
+}
+
+#third-paragraph {
+    color: #00ced1;
+}
+
+.main {
+    opacity: 50%;
+}
+
+.secondclass {
+    color: rgb(0, 206, 209, 0.5);
+}

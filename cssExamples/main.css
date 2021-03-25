@@ -1,0 +1,26 @@
+body {
+    background-color: burlywood;
+    font-size: 30px;
+}
+
+p {
+    color: blue;
+}
+
+.note {
+    color:green;
+}
+
+#idElement {
+    color: red;
+}
+
+body > p {
+    background-color: aqua;
+    /* gadja svu decu bodija */
+}
+
+p span {
+    /* na ovaj način gadjamo sve potomke */
+    background-color: royalblue;
+}

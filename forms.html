@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="./basic-elements.html" method="GET">IME FORME
+        <fieldset> 
+            <legend>Grupa 1</legend> <!--Za fieldset legenda-->
+        <label for="ime">Insert your firstname</label> <!--kada kliknemo na Insert your firstname ono nas odmah ubacuje da kucamo u to polje-->
+
+        <div>
+            <input type="password" name="password" id="ime" size="15" maxlength="30">
+        </div>
+    </fieldset>
+        <div>
+            <textarea name="comment" cols="30" rows="10" placeholder="Placeholder"></textarea>
+        </div>
+        <div>
+            <label for="gender">Insert your gender</label>
+            <input type="radio" name="gender" id="gender" value="m"> Male
+            <!--Ovo m unutra označava šta se šalje nama kada korisnik označi Pol Male-->
+            <input type="radio" name="gender" value="f"> Female
+        </div>
+        <div>
+            <input type="checkbox" name="subject" value="pp">Programming Principles
+            <input type="checkbox" name="subject" value="web">WEB Technologies
+            <input type="checkbox" name="subject" value="spa">Single Page Applications
+        </div>
+        <div>
+            <select name="county" multiple="multiple">
+                <option value="sr">Serbia</option>
+                <option value="gr">Greece</option>
+                <option value="at">Austria</option>
+                <option value="au">Australia</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" name="submit" value="Submit">
+            <!-- Ovde je jedino obrnuto i za value se pise ono sto ce se pokazati useru a u svim ostalim primerima prikazuje ono sto se salje serveru-->
+        </div>
+
+        <div>
+            <input type="hidden" name="browser-type" value="chrome">
+            <input type="date" name="Datum">
+
+        </div>
+
+        <div>
+            <input type="search" name="search" placeholder="Search">
+        </div>
+    </form>
+
+    <!-- 
+                    <div>
+                <input type="file" name="avatar">
+            </div>  Za ovo se koristi uvek samo POST metod, za password se isto koristi POST jer ce da se vidi password gore u browseru na GET methodu
+    -->
+
+
+
+
+
+
+
+
+</body>
+
+</html>

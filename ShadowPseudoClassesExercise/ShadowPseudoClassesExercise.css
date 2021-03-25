@@ -1,0 +1,23 @@
+.links {
+    font-size: 5em;
+}
+
+a:link {
+    color: red;
+}
+
+li {
+    text-shadow: 10 10 10px #FF0000;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: green;
+}
+
+a:focus {
+    color: blue;
+}

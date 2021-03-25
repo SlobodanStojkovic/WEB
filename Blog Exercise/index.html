@@ -1,0 +1,79 @@
+<!--
+    Blog Exercise
+
+Home Page content
+Create a page with two columns
+Width of the left column is 300px
+Right column stretches to cover the rest of the screen
+
+Left column content
+Logo image with height set to 250px
+Under the logo, there should be a list of links
+One of the links should be "Contact"
+The link should link to "./contact.html" page
+
+
+Right column content
+There should be two posts in form of groups
+The first group content:
+Title
+Embedded YouTube video
+The second group content:
+Title
+Video (HTML5) that you will find on the web
+
+Contact Page content
+Embedded Google Map on the page
+Link for getting back to the “Home” page
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px solid">
+        <tr>
+            <td width="300"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" height="250"
+                    alt="">
+                <li><a href="https://www.google.rs">Home</a></li>
+                <li><a href="https://google.com">Other page</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </td>
+            <td width="100%">Kolona 2
+                <div>
+                    <h1>Title</h1>
+                    <iframe width="" height="" src="https://www.youtube.com/embed/xkSVLzkuSUQ" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h1>Title</h1>
+                    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+<!-- Dodatni načini na koje moze da se video embeduje su dati ispod-->
+
+<div>
+    <object data='https://www.youtube.com/embed/xkSVLzkuSUQ'>
+    </object>
+</div>
+<br>
+<div>
+    <embed src="https://www.youtube.com/embed/xkSVLzkuSUQ" type="">
+</div>
+
+</html>
+
+

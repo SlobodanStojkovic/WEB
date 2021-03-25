@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        Table Basics
+Create a table containing phone specification data
+Each row should represent a new phone
+Content of the first column is the phone name
+The second column should contain the phone image (height of 100px)
+The third column should contain the amount of ram
+The fourth column should contain camera information
+The fifth column should contain info about internal memory
+Table should have at least three rows!
+Add column title for each column using th
+
+
+Merging cells across rows
+Add a new column to the table
+Title of the column should be "External antenna"
+Merge all cells in this column into one cell except the column title
+Value inside the cell should be something like "NO"
+
+Merging columns
+Add a row in the table before the first row
+The new row should contain one cell stretching across all columns
+Content of the cell should be something like "Specification"
+
+    -->
+
+
+    <table border="1">
+        <tr>
+            <td colspan="6">Specification</td>
+        </tr>
+        <tr>
+            <th>Phone name</th>
+
+            <th>Phone image</th>
+
+            <th>Amount of RAM</th>
+
+            <th>Camera information</th>
+
+            <th>Internal memory</th>
+
+            <th>External antenna</th>
+
+        </tr>
+        <tr>
+            <td>Apple Iphone 12 PRO MAX</td>
+            <td><img width="100" src="./apple-iphone-12-pro-max-.jpg" alt="Apple Iphone 12 PRO MAX image"></td>
+            <td>6 GB</td>
+            <td>12 MP</td>
+            <td>128-512 GB</td>
+            <td rowspan="3">NO</td>
+        </tr>
+        <td>Samsung Galaxy s21 Ultra 5G</td>
+        <td><img width="100" src="./samsung-galaxy-s21-ultra-5g-.jpg" alt="Samsung Galaxy s21 Ultra 5G image"></img>
+        </td>
+        <td>12/16GB</td>
+        <td>108MP</td>
+        <td>128-512</td>
+        <tr>
+            <td>Huawei P40</td>
+            <td><img width="100" src="./huawei-p40-4g.jpg" alt="Huawei P40 image"></img></td>
+            <td>8GB</td>
+            <td>50MP</td>
+            <td>128GB</td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>
+
+
+

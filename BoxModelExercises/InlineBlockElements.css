@@ -1,0 +1,40 @@
+body > p {
+    background-color: yellow;
+    border: 5px thick;
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.p1, .p3 {
+    border-color: red;
+    border-style: dashed;
+    padding: 50px;
+}
+
+.p2 {
+    border: solid green;
+    padding-top: 50px;
+}
+
+.p1 {
+    width: 300px;
+    margin: 50px;
+}
+
+.p2 {
+    width: 400px;
+    margin: auto;
+}
+
+.p3 {
+    width: 200px;
+    margin-left: 100px;
+}
+
+p {
+    margin-right: 20px;
+    padding: 0;
+    display: inline-block;
+}
+

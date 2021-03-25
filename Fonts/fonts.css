@@ -1,0 +1,39 @@
+* {
+    border: 5px solid green;  /* This applies to all elements and that is why they all will have its border. */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.first {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+
+/* We dont need this when we use through link 
+@font-face {
+    font-family: 'Nosifer', cursive;
+}
+*/
+
+.newFontFamily {
+    font-family: 'Nosifer', cursive;
+}
+
+@font-face {
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+    src: url('../Fonts/LibreFont/LibreBarcode39ExtendedText-Regular.ttf');
+}
+
+.DownloadedFontFamily {
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+    font-size: 3em;
+}
+

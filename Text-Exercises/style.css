@@ -1,0 +1,59 @@
+.p1 {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.p2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.p3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.q1 {
+    color: red;
+    font-size: large;
+}
+
+.q2 {
+    color: aqua;
+    font-size: 2em;
+}
+
+.q3 {
+    color: green;
+    font-size: 3em;
+}
+
+body {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.p1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.p2 {
+    font-style: oblique;
+}
+
+span {
+    font-weight: bolder;
+    font-style: italic;
+}
+    
+@font-face {
+        font-family: Pacifico-Regular;
+        src: url(GoogleCursiveFont/Pacifico-Regular.ttf);
+    }
+
+.p1 {
+        font-family: Pacifico-Regular;
+        font-size: 2em;
+    }
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+}
+

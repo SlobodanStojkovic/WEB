@@ -1,0 +1,13 @@
+.p1 {
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.p2 {
+    line-height: 200%;
+    text-align: right;
+}
+
+.p3 {
+    text-align: center;
+}
