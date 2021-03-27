@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    background-color: teal;
+    overflow: hidden;
+}
+
+.container div {
+    float: left;
+}
+
+h1 {
+    clear: both;
+}
+
+.first {
+    height: 100px; 
+    width: 100px;
+    background-color: tomato;
+}
+
+.second {
+    height: 100px; 
+    width: 100px;
+    background-color: yellowgreen;
+}
+
+.third {
+    height: 100px; 
+    width: 100px;
+    background-color: darkorange;
+}
