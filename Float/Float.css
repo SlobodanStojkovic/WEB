@@ -1,69 +1,67 @@
-* {
-    font-size: 22px;
-}
-
 .navigation {
     box-sizing: border-box;
     background-color: red;
-    text-align: right;
     width: 960px;
     height: 30px;
     font-weight: bold;
     color: white;
     border-collapse: collapse;
     margin: auto;
+    float: right;
 }
 
 li {
     padding-right: 30px;
     list-style-type: none;
     padding-top: 5px;
-    margin: auto;
+    float: right;
 }
 
-img {
+.imgDiv {
     width: 960px;
     border-collapse: collapse;
-    opacity: 90%;
-    position: relative;;
+    position: relative;
     }
 
 .tomatobox {
     background-color: tomato;
     width: 300px;
     height: 200px;
-
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .tealbox {
     background-color:darkslateblue;
     width: 300px;
     height: 200px;
-
     display: inline-block;
-
+    margin-right: 15px;
 }
 
 .orangeBoxText {
     background-color: orange;
     width: 300px;
     height: 250px;
-    display: block;
-
+    display: inline-block;
+    position: relative;
+    top: 53px;
 }
 
 .greenbox {
     background-color: green;
     width: 300px;
     height: 200px;
-
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .orangebox {
     background-color: orange;
     width: 300px;
     height: 200px;
-
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .bitstudent{
@@ -76,38 +74,37 @@ img {
 .container {
     margin: auto;
     width: 960px;
-    border: solid blue 2px;
-
   }
 
-.firstRow {
-    column-count: 3;
-    height: 250px;
-  }
 
-.secondrow  {
-    column-count: 3;
-    height: 220px;
-  }
-  
-.thirdrow {
-      column-count: 3;
-      height: 220px;
-  }
-
-.forthrow {
-    column-count: 3;
-    height: 220px;
+.imgplaceholder {
+    width: 300px;
+    height: 200px;
+    opacity: 0;
 }
 
-.fifthrow {
-    column-count: 3;
-    height: 220px;
+.secondrow > div {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
 }
 
-.sixthrow {
-    column-count: 3;
-    height: 220px;
+.forthrow > div {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
 }
 
+.sixthrow > div {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+* {
+    font-size: 22px;
+}
 
