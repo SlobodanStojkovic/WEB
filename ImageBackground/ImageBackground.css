@@ -1,0 +1,75 @@
+/*
+=======================================================================
+Background
+● Create a page with a main title
+● Add a couple of subheadings
+● After each subheading, add a single paragraph with some text
+● The page should be long enough for the scrollbar to appear
+
+Repeat
+● Find an image that can be included as a repeating image on the
+page
+● Use that image to set a background image on the body element
+
+Attachment
+● Modify the previous example
+● Prevent image from moving while the user scrolls down the
+page
+
+Position
+● Use the previous code structure
+● Remove previously defined styles for the background image
+● Add a new background image. It shouldn’t be repeated
+● Image should be horizontally positioned on the right
+● The image should be positioned vertically in the body center
+● Make it fixed
+
+Size
+● Modify the previous example
+● Make image stretch and cover the whole body
+● However, the image should not be deformed (aspect ratio has
+to be preserved)
+=======================================================================
+*/
+
+/*
+● Find an image that can be included as a repeating image on the
+page
+● Use that image to set a background image on the body element
+
+body {
+    background-image: url(./repeatingImage.jpg);
+}
+*/
+
+
+
+
+/*
+● Add a new background image. It shouldn’t be repeated
+● Image should be horizontally positioned on the right
+● The image should be positioned vertically in the body center
+● Make it fixed
+*/
+
+body {
+    background-image:url(./miamiBeach.jpg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-position: fixed;
+}
+
+
+
+/* 
+● Make image stretch and cover the whole body
+● However, the image should not be deformed (aspect ratio has
+to be preserved)
+
+body {
+    background-size: cover;
+}
+*/
+
+

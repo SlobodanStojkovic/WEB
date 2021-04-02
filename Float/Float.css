@@ -28,7 +28,7 @@ li {
     width: 300px;
     height: 200px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 16px;
 }
 
 .tealbox {
@@ -36,7 +36,7 @@ li {
     width: 300px;
     height: 200px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 16px;
 }
 
 .orangeBoxText {
@@ -44,8 +44,8 @@ li {
     width: 300px;
     height: 250px;
     display: inline-block;
-    position: relative;
-    top: 53px;
+    position: absolute;
+    right: 195px;
 }
 
 .greenbox {
@@ -53,7 +53,7 @@ li {
     width: 300px;
     height: 200px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 16px;
 }
 
 .orangebox {
@@ -61,7 +61,7 @@ li {
     width: 300px;
     height: 200px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 16px;
 }
 
 .bitstudent{
@@ -83,11 +83,20 @@ li {
     opacity: 0;
 }
 
+.firstrow {
+    display: inline-block;
+}
+
+.firstrow, .thirdrow, .fifthrow {
+    margin-right: ;
+}
+
 .secondrow > div {
     display: inline-block;
     width: 300px;
     height: 200px;
     margin-bottom: 50px;
+    margin-right: 17px;
 }
 
 .forthrow > div {
@@ -95,13 +104,16 @@ li {
     width: 300px;
     height: 200px;
     margin-bottom: 50px;
+    margin-right: 16px;
 }
+
 
 .sixthrow > div {
     display: inline-block;
     width: 300px;
     height: 200px;
     margin-bottom: 50px;
+    margin-right: 15px;
 }
 
 * {
