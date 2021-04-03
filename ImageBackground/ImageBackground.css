@@ -66,10 +66,11 @@ body {
 ● Make image stretch and cover the whole body
 ● However, the image should not be deformed (aspect ratio has
 to be preserved)
+*/
 
 body {
     background-size: cover;
 }
-*/
+
 
 
