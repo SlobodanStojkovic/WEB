@@ -17,16 +17,20 @@ Aligning
 */
 
 .img1 {
+    display: block;
     height: 200px;
     float: right;
 }
 
 .img2 {
+    display: block;
     width: 200px;
-    margin: auto;
+    margin: 0 auto;
+    clear: both;
 }
 
 .img3 {
+    display: block;
     width: 200px;
     height: 200px;
     float: left;

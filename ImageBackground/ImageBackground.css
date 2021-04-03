@@ -57,7 +57,7 @@ body {
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: center;
-    background-position: fixed;
+    background-attachment: fixed;
 }
 
 
