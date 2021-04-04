@@ -1,0 +1,12 @@
+img {
+    display: block;
+    float: left;
+    height: 500px;
+}
+
+div {
+    display: inline-block; /* --->>> this has to be written because span is INLINE element whose size cannot be changed unless its given inline-block or block property*/
+    width: 500px;
+    /*float: left; ---->>> in order to use this we need to set-up the display to block*/
+}
+
