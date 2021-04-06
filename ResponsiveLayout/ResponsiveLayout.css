@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid royalblue;
+    background-color: gray;
+}
+
+.post {
+    width: 30%;
+    height: 300px;
+    margin: 3%;
+    background-color: hotpink;
+    float: left;
+}
