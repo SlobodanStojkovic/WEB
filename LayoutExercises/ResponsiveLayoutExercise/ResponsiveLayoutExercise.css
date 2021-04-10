@@ -1,0 +1,158 @@
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear-left {
+    clear: left;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 1%;
+    padding: 1%;
+}
+
+ul li:hover {
+    background-color: aqua;
+}
+
+ul li:hover a {
+    color: white;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    margin: 2% auto;
+}
+
+.headerImage {
+    padding: 4%;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    max-width: 100%;
+}
+
+
+
+
+
+@media only screen and (min-width: 700px) {
+    * {
+        box-sizing: border-box;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    header {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        float: left;
+    }
+
+    .headerImage {
+        width: 100%;
+    }
+
+    .nav {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 140px;
+    }
+
+    li {
+        display: block;
+        float: right;
+    }
+
+    main {
+        width: 100%;
+        display: inline-block;
+    }
+
+    article {
+        display: inline-block;
+    }
+
+    main img {
+        width: 35%;
+    }
+
+    p {
+        display: inline-block;
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    header {
+        margin: auto;
+        width: 90%;
+        margin-right: 3%;
+
+    }
+    
+    h1 {
+        font-size: 2em;
+        display: inline-block;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    li {
+        display: block;
+        float: right;
+        padding: 1%;
+    }
+
+    main {
+        margin: auto;
+        width: 90%;
+        display: block;
+    }
+
+    article {
+        display: inline-block;
+        width: 30%;
+        margin: 0 1%;
+    }
+
+    article img {
+        width: 100%;
+    }
+
+}
