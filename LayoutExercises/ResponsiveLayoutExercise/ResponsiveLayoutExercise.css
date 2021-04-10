@@ -1,26 +1,15 @@
-.clear-fix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.clear-left {
-    clear: left;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1%;
 }
 
 ul {
     list-style-type: none;
 }
 
-
-* {
-    box-sizing: border-box;
-    margin: 1%;
-    padding: 1%;
-}
-
 ul li:hover {
-    background-color: aqua;
+    background-color: rgb(38, 130, 236);
 }
 
 ul li:hover a {
@@ -30,11 +19,11 @@ ul li:hover a {
 header {
     text-align: center;
     width: 100%;
-    margin: 2% auto;
+    margin: 0 auto;
 }
 
 .headerImage {
-    padding: 4%;
+    padding: 2%;
 }
 
 img {
@@ -43,6 +32,7 @@ img {
 
 ul {
     list-style-type: none;
+    padding: 2%;
 }
 
 ul li {
@@ -54,6 +44,7 @@ ul li {
 
 p {
     max-width: 100%;
+    text-align: center;
 }
 
 
@@ -73,10 +64,6 @@ p {
         margin: 0 auto;
     }
 
-    h1 {
-        float: left;
-    }
-
     .headerImage {
         width: 100%;
     }
@@ -84,21 +71,29 @@ p {
     .nav {
         display: block;
         position: absolute;
-        top: 20px;
-        right: 140px;
+        top: 23px;
+        left: 64%;
+    }
+    
+    h1 {
+        float: left;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    ul li {
+        border: hidden;
     }
 
     li {
         display: block;
-        float: right;
+        float: left;
     }
 
     main {
         width: 100%;
-        display: inline-block;
-    }
-
-    article {
         display: inline-block;
     }
 
@@ -106,23 +101,39 @@ p {
         width: 35%;
     }
 
+    article {
+        display: inline-block;
+    }
+
     p {
         display: inline-block;
-        width: 45%;
+        width: 60%;
+        position: relative;
+        bottom: 30px;
+        margin: 0 auto;
     }
 }
+
+
+
 
 @media only screen and (min-width: 901px) {
     header {
         margin: auto;
         width: 90%;
         margin-right: 3%;
+    }
 
+    .headerImage {
+        padding: 0;
+        margin: 0 auto;
     }
     
     h1 {
         font-size: 2em;
         display: inline-block;
+        position: relative;
+        left: -2%;
     }
 
     header img {
@@ -130,19 +141,32 @@ p {
     }
 
     .nav {
-        display: block;
+        display: inline-block;
+        width: 100%;
+    }
+
+    
+    ul {
+        width: 100%;
+    }
+
+    ul li {
+        border: hidden;
     }
 
     li {
         display: block;
-        float: right;
-        padding: 1%;
+        float: left;
+        position: relative;
+        right: 2%;
+        font-size: 2em;
     }
 
     main {
         margin: auto;
-        width: 90%;
+        width: 97%;
         display: block;
+        margin-left: 4.5%;
     }
 
     article {
@@ -153,6 +177,12 @@ p {
 
     article img {
         width: 100%;
+    }
+
+    p {
+        width: 100%;
+        position: relative;;
+        bottom: 0;
     }
 
 }
