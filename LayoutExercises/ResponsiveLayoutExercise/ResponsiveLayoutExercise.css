@@ -8,8 +8,18 @@ ul {
     list-style-type: none;
 }
 
+li a {
+    text-decoration: none;
+}
+
+header img {
+    border: 1px solid rgb(177, 173, 173);
+    border-radius: 5px;
+}
+
 ul li:hover {
     background-color: rgb(38, 130, 236);
+    border-radius: 5px;
 }
 
 ul li:hover a {
@@ -26,6 +36,12 @@ header {
     padding: 2%;
 }
 
+article {
+    border: 1px solid rgb(177, 173, 173);
+    border-radius: 5px;
+    margin-top: 3%;
+}
+
 img {
     width: 100%;
 }
@@ -40,15 +56,24 @@ ul li {
     text-align: center;
     font-weight: bold;
     color: white;
+    border-radius: 5px;
 }
 
 p {
     max-width: 100%;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
 
+
+
+
+
+
+/* TABLET */
 
 
 @media only screen and (min-width: 700px) {
@@ -62,6 +87,15 @@ p {
         text-align: center;
         width: 100%;
         margin: 0 auto;
+    }
+
+    ul li:hover {
+        background-color: rgb(38, 130, 236);
+        border-radius: 5px;
+    }
+    
+    ul li:hover a {
+        color: white;
     }
 
     .headerImage {
@@ -92,6 +126,19 @@ p {
         float: left;
     }
 
+    article {
+        padding: 10px;
+        border: 1px solid rgb(177, 173, 173);
+        border-radius: 5px;
+        padding-bottom: 0px;
+    }
+
+    article img {
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+
     main {
         width: 100%;
         display: inline-block;
@@ -117,11 +164,18 @@ p {
 
 
 
+
+
+
+
+
+
+/* LARGE SCREENS */
+
 @media only screen and (min-width: 901px) {
     header {
-        margin: auto;
-        width: 90%;
-        margin-right: 3%;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .headerImage {
@@ -145,6 +199,11 @@ p {
         width: 100%;
     }
 
+    .headerImage {
+        border: 1px solid rgb(177, 173, 173);
+        padding: 5px;
+        border-radius: 5px;
+    }
     
     ul {
         width: 100%;
@@ -163,20 +222,21 @@ p {
     }
 
     main {
-        margin: auto;
-        width: 97%;
+        margin: 0 auto;
+        width: 100%;
         display: block;
-        margin-left: 4.5%;
     }
 
     article {
         display: inline-block;
         width: 30%;
-        margin: 0 1%;
+        margin: 1.5%;
     }
 
     article img {
         width: 100%;
+        padding: 3%;
+        margin: 2%;
     }
 
     p {
