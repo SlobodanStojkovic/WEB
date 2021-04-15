@@ -4,6 +4,10 @@
     padding: 1%;
 }
 
+.container {
+    width: 95%;
+}
+
 ul {
     list-style-type: none;
 }
@@ -83,7 +87,13 @@ p {
         padding: 1%;
     }
 
+.container {
+    width: 80%;
+    margin: 10px auto;
+}
+
     header {
+        position: relative;
         text-align: center;
         width: 100%;
         margin: 0 auto;
@@ -96,17 +106,19 @@ p {
     
     ul li:hover a {
         color: white;
+        padding: 15px 10px;
     }
 
     .headerImage {
         width: 100%;
     }
 
-    .nav {
+    nav {
         display: block;
         position: absolute;
-        top: 23px;
-        left: 64%;
+        top: 0;
+        right: -21%;
+        width: 50%;
     }
     
     h1 {
@@ -156,7 +168,7 @@ p {
         display: inline-block;
         width: 60%;
         position: relative;
-        bottom: 30px;
+        bottom: 10px;
         margin: 0 auto;
     }
 }
@@ -194,6 +206,14 @@ p {
         width: 100%;
     }
 
+nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 55%;
+}
+
     .nav {
         display: inline-block;
         width: 100%;
@@ -230,7 +250,7 @@ p {
     article {
         display: inline-block;
         width: 30%;
-        margin: 1.5%;
+        margin: 1%;
     }
 
     article img {
