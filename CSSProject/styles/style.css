@@ -10,11 +10,13 @@ MOBILE VERSION
     padding: 0;
 }
 
+
 /*
 ============================================================================= 
 Header and Nav Section
 =============================================================================  
 */
+
 .logo {
     text-transform: uppercase;
     font-size: 35px;
@@ -23,37 +25,45 @@ Header and Nav Section
     font-weight: bold;
     color: rgb(117,117,117);
 }
+
 .logo span {
     border: 4px solid rgb(117,117,117);
     border-right: none;
     padding-left: 10px;
     color: rgb(255,152,1);  
 }
+
 nav ul li a {
     text-decoration: none;
     color: white;
 }
+
 nav ul {
     list-style: none;
     text-align: center;
     background-color: rgb(127,194,247);
     margin: 20px;
 }
+
 nav ul li {
     padding: 7px;
     text-transform: uppercase;
     width: 95%;
 }
+
 nav ul li:hover a {
     color:rgb(127,194,247);
 }
+
 nav ul li:hover {
     background-color: white;
 }
+
 header {
     position: relative;
     width: 100%;
 }
+
 h1 {
     color: rgb(238,238,238);
     text-transform: uppercase;
@@ -65,15 +75,19 @@ h1 {
     top: 40%;
     left: 20%;
 }
+
 header img {
     width: 100%;
 }
+
 .read-more a {
     text-decoration: none;
 }
+
 .read-more a:visited {
     color: white;
 }
+
 .read-more {
     position: relative;
     left: 25%;
@@ -176,7 +190,7 @@ h3 {
 }
 
 .whatpeoplesays h5 {
-    padding-top: 8%;    
+    padding-top: 1%;    
 }
 
 .profilephoto {
@@ -273,7 +287,7 @@ h3 {
 
 .houseimg {
     display:inline-block;
-    width: 110%;
+    width: 70%;
     height: 200px;
 }
 
@@ -287,6 +301,10 @@ iframe {
     margin-right: 3%;
     padding: 1%;
     margin: 1%;
+}
+
+.bluecontact > p {
+    padding: 3%;
 }
 
 .submitbutton {
@@ -389,7 +407,7 @@ nav ul li {
 }
 
 .main-list {
-    right: 10%;
+    right: 1%;
     font-weight: bold;
 }
 
@@ -434,6 +452,7 @@ Main section - Tablet
     width: 45%;
     float: left;
     margin-left: 5%;
+    padding-right: 2%;
 }
 
 .curvywalls {
@@ -441,7 +460,7 @@ Main section - Tablet
 }
 
 .whatpeoplesays {
-    width: 30%;
+    width: 35%;
     float: left;
 }
 
@@ -473,7 +492,7 @@ h5 {
 }
 
 .williamson, .selena {
-    margin-left: 18.5%;
+    margin-left: 13.5%;
 }
 
 .williamson, .jennifer {
@@ -580,8 +599,10 @@ Main section - Large screens
 }
 
 .whatpeoplesays {
+    width: 30%;
     margin: 0;
-    margin-left: 2%;
+    margin-left: 3%;
+    padding-bottom: 5%;
 }
 
 .contactus1, .contactus2 {
