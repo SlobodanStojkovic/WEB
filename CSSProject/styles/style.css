@@ -190,7 +190,7 @@ h3 {
 }
 
 .whatpeoplesays h5 {
-    padding-top: 1%;    
+    padding-top: 7%;    
 }
 
 .profilephoto {
@@ -372,11 +372,11 @@ Header and Nav Section - Tablet
 */
 
 header {
-    position: static;
+    position: relative;
 }
 
 .header-absolute {
-    top: 32%;
+    top: 44%;
     left: 7%;
     font-size: 1.7em;
     width: 80%;
@@ -474,7 +474,7 @@ Main section - Tablet
 }
 
 h5 {
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 .contactus1 {
@@ -543,7 +543,7 @@ Header and Nav Section - Large screens
 }
 
 .header-absolute {
-    top: 34%;
+    top: 44%;
     left: 5%;
     font-size: 1.9em;
     text-align: center;
