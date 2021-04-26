@@ -1,0 +1,22 @@
+.first {
+  margin: 16px;
+  border: 1px solid black; }
+  .first p {
+    color: red;
+    font-size: 18px; }
+
+.second {
+  border: 1px solid black; }
+  .second p {
+    color: lime; }
+
+.main-list {
+  background-color: royalblue; }
+  .main-list ul {
+    background-color: yellow; }
+    .main-list ul li {
+      color: aqua; }
+      .main-list ul li a {
+        color: red; }
+
+/*# sourceMappingURL=main.css.map */
