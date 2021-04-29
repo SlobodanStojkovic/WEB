@@ -11,12 +11,36 @@
 
 <body>
 
-    <!--We will learn concepts in SASS and tommorow if we need we will easily transfer to LESS or some other preprocessor
+    <!--
+    Multiple options for creating CSS
+        1. SASS
+        2. LESS
+        3. Stylus
+
+    We will learn concepts in SASS and tommorow if we need we will easily transfer to LESS or some other preprocessor
     SASS supports two syntaxes:
     - .SASS
     - .SCSS
 
     In order to make SASS work, we need to through GIT BASH connect scss and css folders and type sass --watch sass:css   where (sass is a folder where sass file is (scss extension and css is output folder that will be linked to our main.html). After we finish work we stop watching by using CTRL + C. WATCH looks after whole folder so if we create partial.scss it will also be converted into partial.css
+    
+
+    TRANSPILE or preprocessing is when we use one language and convert it to another one.
+
+    SASS offers these features that dont exist in CSS: Variables, Nesting, Partials, Import, Mixins, Extend/Inheritance, Operators, Functions.    
+
+
+    Transpile SASS to CSS on command vvv
+    sass input.scss output.css  
+    
+    Automatic transpilation when file(scss/sass) is changed vvv
+    sass --watch app/sass:public/stylesheets
+
+
+    PARTIAL is a small sass file that contains little snippets of css that can be included in other sass files. Its a way to modularize CSS and help keep things easier to maintain. Partial files should be named with a leading underscore (_partial.scss). A partial is not transpiled to CSS (it's skipped) because it has underscore _
+
+
+
     -->
 
 
@@ -57,6 +81,15 @@
             <li><a href="">text</a></li>
             <li><a href="">text</a></li>
             <li><a href="">text</a></li>
+        </ul>
+    </div>
+
+    <div class="messages">
+        <ul>
+            <li class="message">Lorem ipsum dolor sit </li>
+            <li class="success">Lorem ipsum dolor sit amet </li>
+            <li class="error">Corrupti dicta nemo veniam. Minima.</li>
+            <li class="warning">Repellendus voluptates voluptatem ad non atque. Magni?</li>
         </ul>
     </div>
 

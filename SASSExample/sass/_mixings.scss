@@ -1,0 +1,6 @@
+
+@mixin paragraph-default {  //if we put paragraph-default ($space) then we can write values
+    margin: 10px;           //and we will also write margin: $space
+    padding: 10px;
+    border: 1px solid black;
+}

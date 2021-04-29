@@ -1,0 +1,63 @@
+
+.first {
+    margin: $common-margin;
+    border: 1px solid black;
+    p {
+        color: $reddish;
+        font-size: $common-font-size;
+    }
+}
+
+.second {
+    border: 1px solid black;
+    p {
+        color: $greenish;
+    }
+}
+
+//before in CSS we would write .main-list ul li a and now we write like this vvv so now we can add properties to main list or ul list
+
+.main-list {
+    background-color: royalblue;
+    ul {
+        background-color: yellow;
+        li {
+            color: aqua;
+            a {
+                color: red;
+            }
+        }
+    }
+}
+
+
+
+p {
+    @include paragraph-default();   //in () we will write value if we included $space paragraph-default(5px)
+}
+
+.second {
+    background-color: $brown;
+}
+
+
+.messages {
+    .message {
+        border: 1px solid black;
+        padding: 10px;
+        color: black;
+    }
+    .success {
+        @extend .message; //this makes us use all settings we already gave to .message plus
+        border-color: green;    //it used 1px black border from .message but color is now green
+    }
+    .error {
+        @extend .message;
+        border-color: red;
+    }
+    .warning {
+        @extend .message;
+        border-color: yellow;
+    }
+
+}

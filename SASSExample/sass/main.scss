@@ -1,38 +1,7 @@
+@import 'variables';
+@import 'mixings';
 
 
+@import 'home-page'; //mixings and variables will be used INSIDE home-page and that is why they need to be included BEFORE home-page
+@import 'contact-page';
 
-$reddish: rgb(255, 0, 0);
-$greenish: rgb(0, 255, 0);
-$common-font-size: 18px;
-$common-margin: 16px;
-
-.first {
-    margin: $common-margin;
-    border: 1px solid black;
-    p {
-        color: $reddish;
-        font-size: $common-font-size;
-    }
-}
-
-.second {
-    border: 1px solid black;
-    p {
-        color: $greenish;
-    }
-}
-
-//before in CSS we would write .main-list ul li a and now we write like this vvv so now we can add properties to main list or ul list
-
-.main-list {
-    background-color: royalblue;
-    ul {
-        background-color: yellow;
-        li {
-            color: aqua;
-            a {
-                color: red;
-            }
-        }
-    }
-}
