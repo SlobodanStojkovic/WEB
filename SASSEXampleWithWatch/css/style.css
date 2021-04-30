@@ -1,0 +1,10 @@
+p {
+  background-color: greenyellow;
+  font-size: 24px;
+  color: red; }
+
+/* Commands typed in into terminal to convert automaticly scss to css are
+cd .\.... - to change location (on .... you write location of your project)
+sass --watch scss:css       - this will transpile automaticly scss file to css*/
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+$background-water: aqua;
+$my-font-size: 24px;
+
+p {
+    background-color: greenyellow;
+    font-size: $my-font-size;
+    color: red;
+}
+
+/* Commands typed in into terminal to convert automaticly scss to css are
+cd .\.... - to change location (on .... you write location of your project)
+sass --watch scss:css       - this will transpile automaticly scss file to css*/
