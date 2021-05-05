@@ -1,0 +1,28 @@
+a {
+  text-decoration: none; }
+
+a:active {
+  background-color: yellow; }
+
+a:visited {
+  background-color: orange; }
+
+a:link {
+  background-color: green; }
+
+a.important {
+  font-weight: bolder; }
+
+.paragraph-1 {
+  font-size: 16px; }
+
+.paragraph-2 {
+  font-size: 18px; }
+
+.paragraph-3 {
+  font-size: 18px; }
+
+.paragraph-4 {
+  font-size: 18px; }
+
+/*# sourceMappingURL=style.css.map */

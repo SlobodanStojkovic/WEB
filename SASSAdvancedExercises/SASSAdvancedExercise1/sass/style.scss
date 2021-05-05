@@ -1,0 +1,31 @@
+a{
+    text-decoration: none;
+}
+
+$defaultfont: 16px;
+    
+a:active {
+        background-color: yellow;
+    }
+
+a:visited {
+        background-color: orange;
+    }
+
+a:link {
+        background-color: green;
+    }
+
+a.important {
+        font-weight: bolder;
+    }
+
+.paragraph-1 {
+    font-size: $defaultfont;
+}
+
+@for $i from 2 through 4 {
+    .paragraph-#{$i} {
+        font-size: $defaultfont + 2px;
+    }
+}
