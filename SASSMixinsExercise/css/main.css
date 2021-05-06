@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*
+Mixins
+● Create mixins for text shadow
+● Create mixins for box shadow
+● Create a page with multiple elements
+
+● Use the mixin for text shadow on one element
+● For some other element, use the mixin for box shadow
+
+Importing Other SASS Files
+● Split all sass styles into main, variables and mixins
+● The main scss file should include variables and mixins
+● Run the transpiling process and include the transpiled style in the HTML
+page
+*/
+.first {
+  text-shadow: 3px 3px 3px green; }
+
+.second {
+  box-shadow: 5px 5px black; }
+
+/*# sourceMappingURL=main.css.map */
