@@ -2,7 +2,7 @@ a{
     text-decoration: none;
 }
 
-$defaultfont: 16px;
+$defaultfont: 14px;
     
 a:active {
         background-color: yellow;
@@ -20,12 +20,9 @@ a.important {
         font-weight: bolder;
     }
 
-.paragraph-1 {
-    font-size: $defaultfont;
-}
 
-@for $i from 2 through 4 {
+@for $i from 1 through 4 {
     .paragraph-#{$i} {
-        font-size: $defaultfont + 2px;
+        font-size: $defaultfont + ($i) * 2px;
     }
 }
