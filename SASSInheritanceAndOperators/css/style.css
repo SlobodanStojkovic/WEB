@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*
+Inheritance and Operators
+● Create a page with three paragraphs
+
+● They should have the following border styles:
+○ The first one should have a red border
+○ The second one should have a blue border
+○ The third one should have a green border
+
+● Use sass inheritance feature to create style for this page
+
+● Use operators (+, -, /) to calculate widths of paragraphs
+*/
+.first, .second, .third {
+  border: solid 3px red;
+  text-decoration: underline;
+  font-size: 26px;
+  width: 31.25%; }
+
+.second, .third {
+  border: solid 3px blue;
+  font-style: italic;
+  width: 505px; }
+
+.third {
+  border: solid 3px green;
+  font-weight: bold;
+  width: 660px; }
+
+/*# sourceMappingURL=style.css.map */
