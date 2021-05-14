@@ -1,0 +1,76 @@
+* {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 960px;
+}
+
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.nav-bar {
+    box-sizing: border-box;
+    background-color: red;
+    display: block;
+}
+
+.nav {
+    color: white;
+    list-style-type: none;
+    float: right;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.logo {
+    width: 100%;
+    } 
+
+.related-topics {
+    list-style: none;
+    width: 30%;
+    background-color: orange;
+    float: right;
+    margin: 1.2%;
+}
+
+.related-topics li {
+    border-bottom: 1px solid black;
+    margin: 35px;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: darkslateblue;
+    width: 100%;
+}
+
+footer > p {
+    width: 960px;
+    color: white;
+    margin: 10px auto;
+}
+
+.orangebox, .redbox, .greenbox, .blackbox {
+    width: 200%;
+}
+
+
+
+
+
+
+
