@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-body {
-    width: 960px;
-}
-
 .clear-fix::after {
     content: '';
     display: block;
@@ -41,15 +37,13 @@ body {
 
 .related-topics {
     list-style: none;
-    width: 30%;
     background-color: orange;
     float: right;
-    margin: 1.2%;
+    height: 250px;
 }
 
 .related-topics li {
     border-bottom: 1px solid black;
-    margin: 35px;
     padding-bottom: 5px;
 }
 
@@ -64,8 +58,12 @@ footer > p {
     margin: 10px auto;
 }
 
-.orangebox, .redbox, .greenbox, .blackbox {
-    width: 200%;
+.redbox, .blackbox, .orangebox, .greenbox {
+    padding-top: 2%;
+}
+
+.related-topics {
+    margin-top: 2%;
 }
 
 
