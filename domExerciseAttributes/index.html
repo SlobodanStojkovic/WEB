@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exercise Attributes</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!--
+
+Attributes
+
+Create a form that contains multiple input elements with labels.
+Some of those elements should be required.
+Create a function that validates the form.
+The function checks each input element that belongs to the form.
+If the element has the required attribute and no data, it should get red borders.
+-->
+
+    <form action="">
+
+        <label for="name">
+            Name:<br>
+            <input type="text" name="name" id="name" required><br>
+        </label><br>
+
+        <label for="lastname">
+            Last Name:<br>
+            <input type="text" name="lastname" id="lastname"><br>
+        </label><br>
+
+        <label for="email">
+            E-mail:<br>
+            <input type="email" name="email" id="email" required><br>
+        </label><br>
+
+        <label for="password">
+            Password:<br>
+            <input type="password" name="password" id="password" required><br>
+        </label> <br>
+
+        <input type="submit" value="Send">
+    </form>
+
+
+    <script src="domExerciseAttributes.js"></script>
+</body>
+
+</html>

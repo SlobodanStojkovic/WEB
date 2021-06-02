@@ -30,7 +30,7 @@ console.log(bodyNode.tagName);  //BODY > because that the tag name
 
 
 var containerDivNode = bodyNode.childNodes[1];  //this is how we access container div, because on index 0 it sees #text
-//this method of accesing is called traversing
+//this method of accesing is called traversing > When a node is selected, you can select another element in relation to it
 
 
 var bodyNode = htmlNode.childNodes[2];
@@ -111,9 +111,11 @@ console.log(firstDivNode.className) //first and alert
 firstDivNode.className = "something";   //to change the div with class "first" class to "something"
 
 
-
+//Whitespace Nodes is space betwen elements.
 //if we dont want that unwanted text nodes be created by browsers instead of node we will use
-// parentElement, previousElementSibling, nextElementSibling, cildren, firstElementChild, lastElementChild
+// parentElement, previousElementSibling, nextElementSibling, children, firstElementChild, lastElementChild
+
+
 
 
 

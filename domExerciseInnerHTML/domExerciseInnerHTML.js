@@ -43,5 +43,17 @@ function createDropdown(array, node) {
     }
     var insertNode = document.querySelector(node);               //Inserting our dropdown list to NODE
     insertNode.appendChild(list);
+
+    
+    var select1 = "";
+    var select2 = "";
+
+    for (var i = 0; i < array.length; i++) {
+        select1 += array[i];
+    }
+
+    div[0].innerHTML = select1;
+    div[div.length - 1].innerHTML = select2;
+    return div;
 }
 createDropdown(["first", "second", "third"], "div");
