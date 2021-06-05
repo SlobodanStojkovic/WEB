@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <input value="Click me" onclick="console.log(Date.now())" type="button"/>
+
+    <input type="text" onfocus="console.log('Focussed input')"/>
+
+    <input type="button" onclick="countRabbits()" value="Count rabbits!"/>
+
+    <script>
+        function countRabbits() {
+            for(var i = 1; i <= 3; i++) {
+                alert('Rabbit number ' + i);
+            }
+        }
+    </script>
+
+    <button onclick="alert(this.innerHTML)">Click me <span>InnerHTML alert</span> </button>
+
+    <div>
+        <input type="button" value="Read me" id="id-1">
+    </div>
+
+
+    <input type="text" id="text-input">
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<!--
+        An event is a signal that something has happened.
+
+        All DOM nodes generate such signals.
+
+        Some of the most useful groups of DOM events are:
+        - mouse events,
+        - keyboard events,
+        - form element events,
+        - document events.
+
+        click > when mouse clicks on an element
+
+        context menu > when the mouse right-clicks on an element
+
+        mouseover/mouseout > when the mouse cursor comes over/leaves the element
+
+        mousedown/mouseup > when the mouse button is pressed/released over an element
+
+        mousemove > when mouse is moved
+
+
+
+        Form element events:
+        submit - when the visitor submits a form
+        focus - when the visitor focuses on a form element (input)
+
+        Keyboard events:
+        keydown and keyup - when the visitor presses and then releases the button
+
+        Document events:
+        DOMContentLoaded - when the HTML is loaded and DOM is fully built
+
+
+
+        To react on events we can assign a HANDLER. /Function that we assign when event happen
+
+        Handler is a function that runs when the event occurs
+
+        There are several ways to assign a handler function to an event:
+        - HTML attribute
+        - DOM property
+        - addEventListener  //most widely used
+
+
+        From one side we have HTML with attributes and on other side we have NODE that has properties. Properties in Node are JavaScript representation of HTML attributes.
+
+
+        HTML Attribute I
+
+        A handler can be set in HTML with an attribute named on<event>
+
+
+        DOM Property
+
+        We can assign a handler using a DOM property on<event>
+
+
+        HTML Attribute and DOM Property
+
+        Browser transforms HTML-attribute handler to DOM property. The handler is always in the DOM property, the HTML-attribute is just one of the ways to initialize it.
+
+
+        addEventListener I
+
+        There is no way to attach multiple  without addEventListener
+
+        DOM EVENTS >>> https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+    -->
