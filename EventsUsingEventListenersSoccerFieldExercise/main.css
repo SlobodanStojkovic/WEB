@@ -1,0 +1,21 @@
+.container {
+    background-image: url(./assets/field.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1000px;
+    width: 100%;
+}
+
+.stop {
+    padding: 5px 20px;
+    background-color: red;
+    position: absolute;
+    top: 70%;
+    right: 1%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
