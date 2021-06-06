@@ -1,0 +1,17 @@
+body {
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+img {
+    position: absolute;
+    bottom: 9%;
+    left: 40%;
+}
+
+.run {
+    position: absolute;
+    bottom: 9%;
+    left: 40%;
+}
