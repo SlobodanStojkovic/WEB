@@ -1,0 +1,61 @@
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.start {
+    background-color: green;
+    padding: 10px;
+}
+
+.startFull {
+    background-color: aqua;
+    padding: 10px;
+}
+
+.stop {
+    background-color: red;
+    padding: 10px;
+}
+
+.color {
+
+    background-color: skyblue;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.darkorange {
+    background-color: darkorange;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.brown {
+    background-color: brown;
+}
