@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+    <ul>
+        <li>
+            <button class="toggle" onclick="changeBackground()" id="togglebutton">Toggle background</button>
+        </li>
+        <li>
+            <button class="turnoff" onclick="turnOff()" id="turnoffbutton">
+                Turn off
+            </button>
+        </li>
+    </ul>
+
+    <script>
+        var online = true;
+        var bodyNode = document.querySelector("body")
+        function changeBackground() {
+            if (online != false) {
+                bodyNode.classList.toggle("skyblue");
+            }
+        }
+    </script>
+
+    <script>
+        var buttonNode = document.getElementById("turnoffbutton")
+        function turnOff() {
+            if (online != true) {
+                buttonNode.textContent = "Turn off";
+                return online = true;
+
+            } else {
+                buttonNode.textContent = "Turn on";
+                return online = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
