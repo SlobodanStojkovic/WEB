@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery">
+            <img id="img1" src="./assets/50df34b9e93f30269853b96b09c37e3b.jpg" alt="image1">
+            <img id="img2"  src="./assets/cb16bb284a2a80c75041c80ba63e62d3.jpg" alt="image2">
+            <img id="img3"  src="./assets/istockphoto-1093110112-612x612.jpg" alt="image3">
+            <img id="img4"  src="./assets/nature-cover-slider-6.jpg" alt="image4">
+            <img id="img5"  src="./assets/photo-1618588507085-c79565432917.jpg" alt="image5">
+            <img id="img6"  src="./assets/road-1072823__340.jpg" alt="image6">
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!--
+Events propagation, stopping and preventing default
+
+Create page containing gallery
+
+Gallery contains six pictures
+At least one of the pictures should have width of 300px
+Add event listeners to all images on page
+User can click on image and in that moment image will get 1px red border
+If Image width is not 300px event propagation should be stopped!
+Register event listener on document object, which listen for clicks
+When click occurs it should print in console on which element user clicked
+-->
