@@ -1,16 +1,17 @@
 .container {
     background-image: url(./assets/field.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 1000px;
-    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
 .stop {
     padding: 5px 20px;
     background-color: red;
     position: absolute;
-    top: 70%;
+    top: 60%;
     right: 1%;
 }
 

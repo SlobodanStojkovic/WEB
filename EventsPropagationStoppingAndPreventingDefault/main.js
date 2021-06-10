@@ -27,12 +27,41 @@ img2.addEventListener("click", handlerAddBorder2);
  */
 
 
+var imgNodeList = document.querySelectorAll('img');
+
+function handlerAddBorder(event) {
+    if (event.target.width === 300) {
+        event.target.classList.toggle("redborder");
+    }
+}
+
+/* for (var i = 0; i < imgNodeList.length; i++) {
+    imgNodeList[i].addEventListener('click', handlerAddBorder)
+} 
+This can be written like this vvv
+*/
+
+var galeryNode = document.querySelector(".gallery");
+
+galeryNode.addEventListener("click", handlerAddBorder)
+
+var bodyNode = document.querySelector("body");
+
+function stopProp(event) {
+    console.log(event.target);
+    event.stopPropagation();
+}
+bodyNode.addEventListener("click", stopProp)
+
+
+
+
+
+/*
 var imgNode = document.querySelectorAll('img');
 
 function handlerAddBorder(img) {
-    if (img.width === 300) {
-        img.classList.toggle("redborder");
-    }
+    img.classList.toggle("redborder");
 }
 
 for (var i = 0; i < imgNode.length; i++) {
@@ -40,6 +69,24 @@ for (var i = 0; i < imgNode.length; i++) {
         handlerAddBorder(this);
     });
 }
+
+
+function preventBorder(img) {
+    if (img.width !== 300) {
+        img.stopPropagination();
+    }
+}
+
+for (var j = 0; j < imgNode.length; j++) {
+    imgNode[j].addEventListener('click', function () {
+        preventBorder();
+    });
+}
+ */
+
+
+
+
 
 
 
