@@ -1,7 +1,9 @@
 body {
     background-image: url(./assets/bg.jpg);
     background-size: cover;
+    background-repeat: repeat-x;
     height: 100%;
+    background-position-x: 1px;
 }
 
 img {
@@ -15,3 +17,4 @@ img {
     bottom: 9%;
     left: 40%;
 }
+

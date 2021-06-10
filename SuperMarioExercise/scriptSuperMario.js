@@ -7,9 +7,9 @@ var marioRun = document.createElement("img");
 marioRun.src = "./assets/mario_running.gif";
 marioRun.className = "run";
 
+var backgroundImage = document.querySelector("container");
 
-
-document.querySelector("html").oncontextmenu =
+//document.querySelector("html").oncontextmenu =    or the method bellow vvv 
 
 function getMarioToRun() {
     bodyNode.removeChild(marioImg);
@@ -17,8 +17,9 @@ function getMarioToRun() {
     setInterval(function () {
         if (marioRun.style.left != "100%") {
             marioRun.style.left = (40 + setInterval(function () { var num = 1; num++; return num }, 100)) + "%";
+            bodyNode.style.backgroundPositionX = (40 - setInterval(function () { var num = 1; num++; return num }, 1)) + "vh";
         }
     }, 100)
 }
 
-//bodyNode.addEventListener("oncontextmenu", getMarioToRun());      This executes code immediatly 
+document.addEventListener("contextmenu", getMarioToRun);     // if we comment this we need to uncomment code UP 
