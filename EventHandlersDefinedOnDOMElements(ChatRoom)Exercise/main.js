@@ -18,5 +18,13 @@ input.addEventListener('keydown', function (event) {
         paragraph.innerHTML = "" + input.value;
         chat.appendChild(paragraph);
         input.value = "";
+        scrollDown();
     }
 });
+
+
+//this function is used so that every new message after filling the chat field scrolls automaticly down vvv
+
+function scrollDown() {
+    chat.scrollTop = chat.scrollHeight;
+}
