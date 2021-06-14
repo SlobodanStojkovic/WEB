@@ -1,0 +1,29 @@
+
+.first {
+    font-family: "Lato";
+}
+  
+  .backgroundGreen {
+    background-color: $greenish;
+}
+  
+.backgroundBlue {
+    background-color: $blueish;
+}
+  
+button.backgroundGreen {
+    background-color: $greenish;
+}
+  
+#name, #phone, #email, #message {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    background-color: #f8f9fa;
+}
+  
+@media (min-width: 762px) {
+    button.backgroundGreen {
+      background-color: $blueish;
+    }
+}
