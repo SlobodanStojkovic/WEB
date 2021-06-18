@@ -1,0 +1,32 @@
+body {
+    background-color: aquamarine;
+    height: 100vh;
+    background-image: url(https://208.v4.savills-vx.com/_images/office-space-sector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.toDoList {
+    width: 30%;
+    height: 70%;
+    border: 3px solid red;
+    background-color: aqua;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    padding-left: 10px;
+}
+
+input {
+    width: 80%;
+    background-color: gainsboro;
+}
+
+.send {
+    width: 15%;
+    background-color: yellowgreen;
+}
+
+h1 {
+    text-align: center;
+}
