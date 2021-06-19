@@ -1,0 +1,10 @@
+div {
+    height: 120px;
+    width: 120px;
+    background-color: orange;
+    position: absolute;
+}
+
+.div2 {
+    left: 200px;
+}
