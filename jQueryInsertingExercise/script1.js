@@ -16,6 +16,18 @@ var imagesArray = ["https://a-z-animals.com/media/2021/01/mammals-400x300.jpg", 
 var galleryDiv = $("<div class='gallery'>");
 galleryDiv.appendTo("body");
 
+function addNewImage() {
+    for (var i = 0; i < imagesArray.length; i++) {
+        var createImage = $("<img>");
+        createImage.attr("src", imagesArray[i]);
+        createImage.appendTo(".gallery");
+    }
+}
+addNewImage();
+
+
+
+/* this code is longer version of the above one
 var galleryImg1 = $("<img>");
 galleryImg1.attr("src", imagesArray[0]);
 galleryImg1.appendTo(".gallery");
@@ -26,7 +38,9 @@ galleryImg2.appendTo(".gallery");
 
 var galleryImg3 = $("<img>");
 galleryImg3.attr("src", imagesArray[2]);
-galleryImg3.appendTo(".gallery");
+galleryImg3.appendTo(".gallery"); */
+
+
 
 var newTitle = $("<h1>");
 newTitle.text("Amazing Gallery");
@@ -39,14 +53,34 @@ $(".gallery img:last-child").css("width", "700px");
 
 
 
-var stop = true;    //this is needed because after it sets border on first image it needs to stop
+//function randomizeSize() randomizes width of each image on button click and applies border green to all elements with width less than 200px
+//after it reaches first element with size bigger than 200 px border applying stops
+var stop = true;
+var num = 0;
 
-$("img").each(function () {
-    if ($("img").width() >= 200 && stop == true) {
-        $(this).css("border", "3px solid green")
-        stop = false;
-    }
-});
+function randomizeSize() {
+    $("img").each(function () {
+        var randomWidth = 50 + Math.floor(Math.random() * 350);
+
+        $(this).css("width", randomWidth);
+        $(this).removeClass("borderGreen");
+
+        if ($(this).width() <= 200 && stop === true) {
+            $(this).addClass("borderGreen");
+            num++;
+        } else {
+            if (num >= 1) {
+                stop = false;
+            }
+        }
+    })
+    num = 0;
+    stop = true;
+}
+
+
+
+
 
 
 
