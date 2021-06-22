@@ -10,15 +10,26 @@ function movePlayer(e) {            //move player function
     }, 500)
 };
 
-
-$("body").on("click", movePlayer);  //this moves player
-
-
-$("button").click(function () {     //this stops player from moving after we click stop button
-    $("body").off("click", movePlayer)
-})
+function startMovingPlayer() {
+    $("body").on("click", movePlayer);  //this moves player
+    enabled = true;
+}
+startMovingPlayer();
 
 
+$("button").click(function toggleOnAndOff() {
+    if (!enabled === true) {
+        setTimeout(function () { $("body").on("click", movePlayer) }, 10);
+        $(".stop").html("Stop");
+        $(".stop").css("backgroundColor", "red");
+        enabled = true;
+    } else {
+        $("body").off("click", movePlayer);
+        $(".stop").html("Start");
+        $(".stop").css("backgroundColor", "skyblue");
+        enabled = false;
+    }
+});
 
 
 
