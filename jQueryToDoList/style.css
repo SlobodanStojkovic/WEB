@@ -30,3 +30,7 @@ input {
 h1 {
     text-align: center;
 }
+
+.linethrough {
+    text-decoration: line-through;
+}
