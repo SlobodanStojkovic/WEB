@@ -1,7 +1,7 @@
 body {
     background-color: aquamarine;
     height: 100vh;
-    background-image: url(https://208.v4.savills-vx.com/_images/office-space-sector.jpg);
+    background-image: url(./assets/office.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -10,11 +10,12 @@ body {
     width: 30%;
     height: 70%;
     border: 3px solid rgba(73, 73, 255, 0.829);
-    background-color: aqua;
+    background-color: skyblue;
     position: absolute;
     top: 10%;
     left: 35%;
     padding-left: 10px;
+    overflow-y: auto;       /*adds a scroll bar to this div */
 }
 
 input {
@@ -35,9 +36,14 @@ h1 {
     text-decoration: line-through;
 }
 
-img {
-    width: 30px;
+.delete {
+    width: 20px;
     height: 20px;
-    background-color: transparent;
-    opacity: 1;
+    float: right;
+    margin-right: 10px;
+    background: none;
+}
+
+li {
+    padding: 3px;
 }
