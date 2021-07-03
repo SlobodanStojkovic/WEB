@@ -1,0 +1,43 @@
+.container {
+    width: 90%;
+    margin-top: 100px;
+}
+
+h1 {
+    margin-left: 11%;
+}
+
+input {
+    position: absolute;
+    right: 9%;
+    top: 105px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+
+    background: url("./assets/icons8-search-50.png") no-repeat 3px 3px; /* 3px 3px is icon padding */
+    background-size: 20px;  /* size of the icon */
+    padding-left:30px;  /* this moves input inner text from left edge so that icon can fit there */
+}
+
+.gallery {
+    margin-right: 10px;
+    margin-left: 145px;
+}
+
+.users {
+    display: inline-block;
+    width: 30% ;
+    height: 500px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 460px;
+    height: 460px;
+}
+
+a {
+    display: block;
+}
