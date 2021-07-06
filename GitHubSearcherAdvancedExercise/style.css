@@ -1,3 +1,7 @@
+body {
+    background-color: skyblue;
+}
+
 .container {
     width: 90%;
     margin-top: 100px;
@@ -15,10 +19,9 @@ input {
     border-radius: 10px;
     padding: 5px;
     border: 1px solid gray;
-
     background: url("./assets/icons8-search-50.png") no-repeat 3px 3px; /* 3px 3px is icon padding */
     background-size: 20px;  /* size of the icon */
-    padding-left:30px;  /* this moves input inner text from left edge so that icon can fit there */
+    padding-left: 30px;  /* this moves input inner text from left edge so that icon can fit there */
 }
 
 .gallery {
@@ -28,9 +31,9 @@ input {
 
 .users {
     display: inline-block;
-    width: 30% ;
+    width: 30%;
     height: 500px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .gallery img {
@@ -40,10 +43,41 @@ input {
 
 a {
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .usernameP {
     cursor: pointer;
     padding: 0;
     text-decoration: none;
+}
+
+@media (max-width: 1550px) {
+    .gallery img {
+        width: 330px;
+        height: 330px;
+    }
+
+    
+    .users {
+        display: inline-block;
+        width: 30%;
+        height: 370px;
+        padding: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .gallery img {
+        width: 230px;
+        height: 230px;
+    }
+    
+    .users {
+        display: inline-block;
+        width: 30%;
+        height: 270px;
+        padding: 10px;
+    }
 }
