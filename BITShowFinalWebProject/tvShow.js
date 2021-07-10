@@ -31,7 +31,7 @@ function getShowDetails() {
 
             var $img = $("<img>");
             $img.attr("src", image);
-            $main.append($img);
+            $main.prepend($img);
 
             $(description).insertAfter($showDetails);
         }
@@ -42,10 +42,11 @@ function getShowDetails() {
 
             var response5 = JSON.parse(request5.responseText);
             var numberOfSeasons = response5.length;
+            $("#h3Seasons").html(`Seasons (${numberOfSeasons})`);
 
-            var $ul = $("<ul class='seasons'>");
-            $ul.text("Seasons(" + numberOfSeasons + ")");
-            $("img").after($ul[0]);
+            var $ul = $("<ul class='seasons col12'>");
+
+            $("#h3Seasons").after($ul);
 
             for (var i = numberOfSeasons - 1; i >= 0; i--) {
                 var seasonStart = response5[i].premiereDate;
@@ -53,7 +54,7 @@ function getShowDetails() {
 
                 var $li = $("<li>");
                 $li.text(seasonStart + " - " + seasonEnd);
-                $("ul").append($li);
+                $(".seasons").append($li);
             }
         }
     };
@@ -63,16 +64,15 @@ function getShowDetails() {
 
             var response6 = JSON.parse(request6.responseText);
 
-            var $ul = $("<ul class='cast'>");
-            $ul.text("Cast");
-            $("ul").append($ul[0]);
+            var $ul = $("<ul class='cast col12'>");
+            $("#h3Cast").after($ul);
 
             for (var j = 0; j < response6.length; j++) {
                 var actorName = response6[j].person.name;
 
                 var $li = $("<li>");
                 $li.text(actorName);
-                $("ul").last().append($li);
+                $(".cast").append($li);
             }
         }
     };
@@ -96,17 +96,22 @@ function getCrew() {
 
             var response7 = JSON.parse(request7.responseText);
 
-            var ulDivCrew = $("<ul class='ulCrew'>");
-            ulDivCrew.text("Crew");
+            var olDivCrew = $("<ol class='olCrew'>");
 
-            $("div").last().after(ulDivCrew);
+            $(".crew").append(olDivCrew);
 
             for (var k = 0; k < response7.length; k++) {
                 var crewName = response7[k].person.name;
 
                 var liCrew = $("<li>");
                 liCrew.text(crewName);
-                $(".ulCrew").append(liCrew);
+                $(".olCrew").append(liCrew);
+            }
+
+            if ($(".olCrew").children().length < 1) {
+                var liCrew = $("<li>");
+                liCrew.text("There is no available information.");
+                $(".olCrew").append(liCrew);
             }
         }
     };
@@ -131,17 +136,22 @@ function getAkas() {
 
             var response8 = JSON.parse(request8.responseText);
 
-            var ulDivAkas = $("<ul class='ulAkas'>");
-            ulDivAkas.text("Akas");
+            var olDivAkas = $("<ol class='olAkas'>");
 
-            $("div").last().after(ulDivAkas);
+            $(".akas").append(olDivAkas);
 
             for (var l = 0; l < response8.length; l++) {
                 var akasName = response8[l].name;
 
                 var liAkas = $("<li>");
                 liAkas.text(akasName);
-                $(".ulAkas").append(liAkas);
+                $(".olAkas").append(liAkas);
+            }
+
+            if ($(".olAkas").children().length < 1) {
+                var liAkas = $("<li>");
+                liAkas.text("There is no available information.");
+                $(".olAkas").append(liAkas);
             }
         }
     };
@@ -166,17 +176,23 @@ function getEpisodes() {
 
             var response9 = JSON.parse(request9.responseText);
 
-            var ulDivEpisodes = $("<ul class='ulEpisodes'>");
-            ulDivEpisodes.text("Episodes");
+            var olDivEpisodes = $("<ol class='olEpisodes'>");
 
-            $("div").last().after(ulDivEpisodes);
+            $(".episodes").append(olDivEpisodes);
 
             for (var m = 0; m < response9.length; m++) {
                 var episodeName = response9[m].name;
 
                 var liEpisode = $("<li>");
                 liEpisode.text(episodeName);
-                $(".ulEpisodes").append(liEpisode);
+                $(".olEpisodes").append(liEpisode);
+            }
+
+
+            if ($(".olEpisodes").children().length < 1) {
+                var liEpisode = $("<li>");
+                liEpisode.text("There is no available information.");
+                $(".olEpisodes").append(liEpisode);
             }
         }
     };
@@ -187,24 +203,25 @@ function getEpisodes() {
     $("#getEpisodes").attr("onclick", "hideEpisodes()");
 }
 
-function hideCrew () {
-    $(".ulCrew").remove();
+function hideCrew() {
+
+    $(".olCrew").remove();
     $("#getCrew").html("Show Crew");
     $("#getCrew").attr("onclick", "");
     $("#getCrew").attr("onclick", "getCrew()");
 }
 
-function hideAkas () {
-    $(".ulAkas").remove();
-    $(".akas").remove();
+function hideAkas() {
+
+    $(".olAkas").remove();
     $("#getAkas").html("Show Akas");
     $("#getAkas").attr("onclick", "");
     $("#getAkas").attr("onclick", "getAkas()");
 }
 
-function hideEpisodes () {
-    $(".ulEpisodes").remove();
-    $(".episodes").remove();
+function hideEpisodes() {
+
+    $(".olEpisodes").remove();
     $("#getEpisodes").html("Show Episodes");
     $("#getEpisodes").attr("onclick", "");
     $("#getEpisodes").attr("onclick", "getEpisodes()");

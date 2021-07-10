@@ -19,23 +19,23 @@ function searchForShow() {
                 var searchResult = response2[j].show.name;
                 var searchedShowId = response2[j].show.id;
 
-                var $optionNode = $("<option>");
-                $optionNode.text(searchResult);
-                $optionNode.attr("class", "searchedOption");
-                $optionNode.attr("id", searchedShowId);
 
-                $("#searchOptions").append($optionNode);
+                var liOption = $("<li>");
+                liOption.text(searchResult);
+                liOption.attr("class", "searchedOption dropdown-item");
+                liOption.attr("id", searchedShowId);
+
+                $("#searchOptions").append(liOption);
             }
 
-            $(".searchedOption").on("click", function () {
-                console.log("CLICK")
-                /* var showName = $(this).text(); */
+            $(".searchedOption").click(function () {
+                var showName = $(this).text();
                 var showId = $(this).attr("id");
-                console.log(showId);
-                /* localStorage.setItem("1", showName); */
+
+                localStorage.setItem("1", showName);
                 localStorage.setItem("2", showId);
                 window.location.replace("tvShow.html");
-            })
+            });
         }
     }
     request2.send();
