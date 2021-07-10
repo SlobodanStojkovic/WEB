@@ -45,7 +45,7 @@ function getShowDetails() {
 
             var $ul = $("<ul class='seasons'>");
             $ul.text("Seasons(" + numberOfSeasons + ")");
-            $("img")[0].after($ul[0]);
+            $("img").after($ul[0]);
 
             for (var i = numberOfSeasons - 1; i >= 0; i--) {
                 var seasonStart = response5[i].premiereDate;
@@ -96,19 +96,17 @@ function getCrew() {
 
             var response7 = JSON.parse(request7.responseText);
 
-            var divCrew = $("<div class='crew'>");
             var ulDivCrew = $("<ul class='ulCrew'>");
             ulDivCrew.text("Crew");
 
-            $("p").last().append(divCrew);
-            $("div").last().append(ulDivCrew);
+            $("div").last().after(ulDivCrew);
 
             for (var k = 0; k < response7.length; k++) {
                 var crewName = response7[k].person.name;
 
                 var liCrew = $("<li>");
                 liCrew.text(crewName);
-                $("ul").last().append(liCrew);
+                $(".ulCrew").append(liCrew);
             }
         }
     };
@@ -133,19 +131,17 @@ function getAkas() {
 
             var response8 = JSON.parse(request8.responseText);
 
-            var divAkas = $("<div class='akas'>");
             var ulDivAkas = $("<ul class='ulAkas'>");
             ulDivAkas.text("Akas");
 
-            $("p").last().append(divAkas);
-            $("div").last().append(ulDivAkas);
+            $("div").last().after(ulDivAkas);
 
             for (var l = 0; l < response8.length; l++) {
                 var akasName = response8[l].name;
 
                 var liAkas = $("<li>");
                 liAkas.text(akasName);
-                $("ul").last().append(liAkas);
+                $(".ulAkas").append(liAkas);
             }
         }
     };
@@ -170,19 +166,17 @@ function getEpisodes() {
 
             var response9 = JSON.parse(request9.responseText);
 
-            var divEpisodes = $("<div class='episodes'>");
             var ulDivEpisodes = $("<ul class='ulEpisodes'>");
             ulDivEpisodes.text("Episodes");
 
-            $("p").last().append(divEpisodes);
-            $("div").last().append(ulDivEpisodes);
+            $("div").last().after(ulDivEpisodes);
 
             for (var m = 0; m < response9.length; m++) {
                 var episodeName = response9[m].name;
 
                 var liEpisode = $("<li>");
                 liEpisode.text(episodeName);
-                $("ul").last().append(liEpisode);
+                $(".ulEpisodes").append(liEpisode);
             }
         }
     };
@@ -191,7 +185,6 @@ function getEpisodes() {
     $("#getEpisodes").html("Hide Episodes");
     $("#getEpisodes").attr("onclick", "");
     $("#getEpisodes").attr("onclick", "hideEpisodes()");
-    
 }
 
 function hideCrew () {
