@@ -3,19 +3,19 @@ var gallery = $(".gallery");
 
 function showTop50() {
 
-    var request = new XMLHttpRequest;
+    var showTop50Request = new XMLHttpRequest;
 
-    var endpoint = "http://api.tvmaze.com/shows";
+    var showTop50Endpoint = "http://api.tvmaze.com/shows";
 
-    request.open("GET", endpoint);
+    showTop50Request.open("GET", showTop50Endpoint);
 
-    request.onload = function () {
-        if (request.status >= 200 && request.status < 300) {
-            var response = JSON.parse(request.responseText);
+    showTop50Request.onload = function () {
+        if (showTop50Request.status >= 200 && showTop50Request.status < 300) {
+            var response = JSON.parse(showTop50Request.responseText);
 
             response.sort(function (a, b) {                     //this sorts response by rating descending 
                 return b.rating.average - a.rating.average;
-            });         
+            });
 
 
             for (let i = 0; i < 50; i++) {
@@ -23,35 +23,44 @@ function showTop50() {
                 var image = response[i].image.medium;
                 var showId = response[i].id;
 
-                var $div = $("<div class='show'>");
+                var $div = $("<div class='show col-4 p-3'>");
                 gallery.append($div);
 
                 var $img = $("<img>");
                 $img.attr("src", image);
+                $img.attr("class", showId);
+                $img.attr("alt", name);
                 $div.append($img);
 
                 var $a = $("<a>");
                 $a.addClass("userLink");
-                $a[0].setAttribute("href", "./tvShow.html");
-                $a[0].setAttribute("target", "_blank");
-                $a[0].setAttribute("id", showId);
-                $div.append($a[0]);
+                $a.attr("href", "./tvShow.html");
+                $a.attr("target", "_blank");
+                $a.attr("id", showId);
+                $a.text(name);
 
-                var $p = $("<p>");
-                $p.text(name);
-                $p.appendTo($a[0]);
+                $div.append($a);
             }
 
             $("a").click(function () {
-                var showName = $(this).find("p").text();
+                var showName = $(this).text();
                 var showId = $(this).attr("id");
 
                 localStorage.setItem("1", showName);
                 localStorage.setItem("2", showId);
             })
+
+            $("img").click(function () {
+                var showName = $(this).attr("alt");
+                var showId = $(this).attr("class");
+
+                localStorage.setItem("1", showName);
+                localStorage.setItem("2", showId);
+                window.location.replace("tvShow.html");
+            })
         }
     }
-    request.send();
+    showTop50Request.send();
 }
 showTop50();
 

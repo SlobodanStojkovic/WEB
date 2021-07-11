@@ -3,22 +3,21 @@ var gallery = $(".gallery");
 
 function searchForShow() {
 
-    var request2 = new XMLHttpRequest;
+    var searchShowRequest = new XMLHttpRequest;
     var query = input.val();
-    var endpoint2 = "http://api.tvmaze.com/search/shows?q=" + query;
+    var searchShowEndpoint = "http://api.tvmaze.com/search/shows?q=" + query;
 
-    request2.open("GET", endpoint2);
+    searchShowRequest.open("GET", searchShowEndpoint);
 
-    request2.onload = function () {
-        if (request2.status >= 200 && request2.status < 300) {
-            var response2 = JSON.parse(request2.responseText);
+    searchShowRequest.onload = function () {
+        if (searchShowRequest.status >= 200 && searchShowRequest.status < 300) {
+            var response2 = JSON.parse(searchShowRequest.responseText);
 
             $("#searchOptions").empty();    //this empties all the options from search list
 
             for (var j = 0; j < response2.length && j < 10; j++) {
                 var searchResult = response2[j].show.name;
                 var searchedShowId = response2[j].show.id;
-
 
                 var liOption = $("<li>");
                 liOption.text(searchResult);
@@ -38,7 +37,7 @@ function searchForShow() {
             });
         }
     }
-    request2.send();
+    searchShowRequest.send();
 }
 input.keyup(searchForShow);
 

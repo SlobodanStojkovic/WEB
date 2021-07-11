@@ -5,26 +5,30 @@ localStorage.removeItem("1");
 var showId = localStorage.getItem("2");
 localStorage.removeItem("2");
 
+var $getCrew = $("#getCrew");
+var $getAkas = $("#getAkas");
+var $getEpisodes = $("#getEpisodes");
+
 function getShowDetails() {
     var $main = $("main");
     var $showDetails = $("#showDetails");
 
-    var request4 = new XMLHttpRequest();
-    var request5 = new XMLHttpRequest();
-    var request6 = new XMLHttpRequest();
+    var imageDescrRequest = new XMLHttpRequest();
+    var seasonsRequest = new XMLHttpRequest();
+    var castRequest = new XMLHttpRequest();
 
-    var endpoint4 = "http://api.tvmaze.com/shows/" + showId;
-    var endpoint5 = "http://api.tvmaze.com/shows/" + showId + "/seasons";
-    var endpoint6 = "http://api.tvmaze.com/shows/" + showId + "/cast";
+    var imageDescrEndpoint = "http://api.tvmaze.com/shows/" + showId;
+    var seasonsEndpoint = "http://api.tvmaze.com/shows/" + showId + "/seasons";
+    var castEndpoint = "http://api.tvmaze.com/shows/" + showId + "/cast";
 
-    request4.open("GET", endpoint4);
-    request5.open("GET", endpoint5);
-    request6.open("GET", endpoint6);
+    imageDescrRequest.open("GET", imageDescrEndpoint);
+    seasonsRequest.open("GET", seasonsEndpoint);
+    castRequest.open("GET", castEndpoint);
 
-    request4.onload = function () {
-        if (request4.status >= 200 && request4.status < 300) {
+    imageDescrRequest.onload = function () {
+        if (imageDescrRequest.status >= 200 && imageDescrRequest.status < 300) {
 
-            var response4 = JSON.parse(request4.responseText);
+            var response4 = JSON.parse(imageDescrRequest.responseText);
 
             var image = response4.image.original;
             var description = response4.summary;
@@ -37,10 +41,10 @@ function getShowDetails() {
         }
     };
 
-    request5.onload = function () {
-        if (request5.status >= 200 && request5.status < 300) {
+    seasonsRequest.onload = function () {
+        if (seasonsRequest.status >= 200 && seasonsRequest.status < 300) {
 
-            var response5 = JSON.parse(request5.responseText);
+            var response5 = JSON.parse(seasonsRequest.responseText);
             var numberOfSeasons = response5.length;
             $("#h3Seasons").html(`Seasons (${numberOfSeasons})`);
 
@@ -59,10 +63,10 @@ function getShowDetails() {
         }
     };
 
-    request6.onload = function () {
-        if (request6.status >= 200 && request6.status < 300) {
+    castRequest.onload = function () {
+        if (castRequest.status >= 200 && castRequest.status < 300) {
 
-            var response6 = JSON.parse(request6.responseText);
+            var response6 = JSON.parse(castRequest.responseText);
 
             var $ul = $("<ul class='cast col12'>");
             $("#h3Cast").after($ul);
@@ -77,11 +81,12 @@ function getShowDetails() {
         }
     };
 
-    request4.send();
-    request5.send();
-    request6.send();
+    imageDescrRequest.send();
+    seasonsRequest.send();
+    castRequest.send();
 }
 setTimeout(getShowDetails, 500);
+
 
 
 function getCrew() {
@@ -118,9 +123,11 @@ function getCrew() {
     request7.send();
 
     $("#getCrew").html("Hide Crew");
-    $("#getCrew").attr("onclick", "");
-    $("#getCrew").attr("onclick", "hideCrew()");
+    $getCrew.off("click");
+    $getCrew.one("click", hideCrew);
 }
+$getCrew.one("click", getCrew);
+
 
 
 function getAkas() {
@@ -158,9 +165,11 @@ function getAkas() {
     request8.send();
 
     $("#getAkas").html("Hide Akas");
-    $("#getAkas").attr("onclick", "");
-    $("#getAkas").attr("onclick", "hideAkas()");
+    $getAkas.off("click");
+    $getAkas.one("click", hideAkas);
 }
+$getAkas.one("click", getAkas);
+
 
 
 function getEpisodes() {
@@ -199,30 +208,34 @@ function getEpisodes() {
     request9.send();
 
     $("#getEpisodes").html("Hide Episodes");
-    $("#getEpisodes").attr("onclick", "");
-    $("#getEpisodes").attr("onclick", "hideEpisodes()");
+    $getEpisodes.off("click");
+    $getEpisodes.one("click", hideEpisodes);
 }
+$getEpisodes.one("click", getEpisodes);
+
+
 
 function hideCrew() {
-
     $(".olCrew").remove();
     $("#getCrew").html("Show Crew");
-    $("#getCrew").attr("onclick", "");
-    $("#getCrew").attr("onclick", "getCrew()");
+    $getCrew.off("click");
+    $getCrew.one("click", getCrew);
 }
+
 
 function hideAkas() {
-
     $(".olAkas").remove();
     $("#getAkas").html("Show Akas");
-    $("#getAkas").attr("onclick", "");
-    $("#getAkas").attr("onclick", "getAkas()");
+    $getAkas.off("click");
+    $getAkas.one("click", getAkas);
 }
+
 
 function hideEpisodes() {
-
     $(".olEpisodes").remove();
     $("#getEpisodes").html("Show Episodes");
-    $("#getEpisodes").attr("onclick", "");
-    $("#getEpisodes").attr("onclick", "getEpisodes()");
+    $getEpisodes.off("click");
+    $getEpisodes.one("click", getEpisodes);
 }
+
+

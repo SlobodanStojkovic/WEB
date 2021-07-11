@@ -13,10 +13,12 @@ body {
 
 .show {
   display: inline-block;
-  width: 30%; }
+  width: 30%;
+  text-align: center; }
 
 .show img {
-  width: 400px; }
+  width: 400px;
+  cursor: pointer; }
 
 form {
   position: relative; }
