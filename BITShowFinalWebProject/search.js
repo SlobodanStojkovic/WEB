@@ -42,8 +42,9 @@ function searchForShow() {
 input.keyup(searchForShow);
 
 
-/* If we want that in search menu after we type something and hit enter it displays us TV shows that correspond search query, we will insert this piece of code
+/* If we want that in search menu after we type something and hit enter it displays us TV shows that correspond search query, we will insert this piece of code */
 
+/*
 input.keypress(function (e) {
     if (e.which == 13) {
 
@@ -51,53 +52,62 @@ input.keypress(function (e) {
 
         function showSearched() {
 
-            var request3 = new XMLHttpRequest;
+            var showSearchedRequest = new XMLHttpRequest;
 
-            var endpoint3 = "http://api.tvmaze.com/search/shows?q=" + input.val();
+            var showSearchedEndpoint = "http://api.tvmaze.com/search/shows?q=" + input.val();
 
-            request3.open("GET", endpoint3);
+            showSearchedRequest.open("GET", showSearchedEndpoint);
 
             gallery.empty();
 
-            request3.onload = function () {
-                if (request3.status >= 200 && request3.status < 300) {
-                    var response3 = JSON.parse(request3.responseText);
+            showSearchedRequest.onload = function () {
+                if (showSearchedRequest.status >= 200 && showSearchedRequest.status < 300) {
+                    var response3 = JSON.parse(showSearchedRequest.responseText);
 
-                    for (let k = 0; k < response3.length; k++) {
+                    for (let i = 0; i < response3.length; i++) {
 
-                        var name3 = response3[k].show.name;
-                        var image3 = response3[k].show.image.medium;
-                        var showId3 = response3[k].show.id;
+                        var name = response3[i].show.name;
+                        var image = response3[i].show.image.medium;
+                        var showId = response3[i].show.id;
 
-                        var $div3 = $("<div class='show'>");
-                        gallery.append($div3);
+                        var $div = $("<div class='show col-4 p-3'>");
+                        gallery.append($div);
 
-                        var $img3 = $("<img>");
-                        $img3.attr("src", image3);
-                        $div3.append($img3);
+                        var $img = $("<img>");
+                        $img.attr("src", image);
+                        $img.attr("class", showId);
+                        $img.attr("alt", name);
+                        $div.append($img);
 
-                        var $a3 = $("<a>");
-                        $a3.addClass("userLink");
-                        $a3[0].setAttribute("href", "./tvShow.html");
-                        $a3[0].setAttribute("target", "_blank");
-                        $a3[0].setAttribute("id", showId3);
-                        $div3.append($a3[0]);
+                        var $a = $("<a>");
+                        $a.addClass("userLink");
+                        $a.attr("href", "./tvShow.html");
+                        $a.attr("target", "_blank");
+                        $a.attr("id", showId);
+                        $a.text(name);
 
-                        var $p3 = $("<p>");
-                        $p3.text(name3);
-                        $p3.appendTo($a3[0]);
+                        $div.append($a);
                     }
 
                     $("a").click(function () {
-                        var showName = $(this).find("p").text();
+                        var showName = $(this).text();
                         var showId = $(this).attr("id");
 
                         localStorage.setItem("1", showName);
                         localStorage.setItem("2", showId);
                     })
+
+                    $("img").click(function () {
+                        var showName = $(this).attr("alt");
+                        var showId = $(this).attr("class");
+
+                        localStorage.setItem("1", showName);
+                        localStorage.setItem("2", showId);
+                        window.location.replace("tvShow.html");
+                    })
                 }
             }
-            request3.send();
+            showSearchedRequest.send();
         }
         showSearched();
     }

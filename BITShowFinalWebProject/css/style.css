@@ -13,8 +13,10 @@ body {
 
 .show {
   display: inline-block;
-  width: 30%;
   text-align: center; }
+
+a {
+  display: block; }
 
 .show img {
   width: 400px;
