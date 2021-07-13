@@ -91,13 +91,25 @@ aside ul li {
   height: fit-content; }
 
 .olCrew li {
-  border: 1px solid black; }
+  border: 1px solid black;
+  border-bottom: none; }
+
+.olCrew li:last-child {
+  border-bottom: 1px solid black; }
 
 .olAkas li {
-  border: 1px solid black; }
+  border: 1px solid black;
+  border-bottom: none; }
+
+.olAkas li:last-child {
+  border-bottom: 1px solid black; }
 
 .olEpisodes li {
-  border: 1px solid black; }
+  border: 1px solid black;
+  border-bottom: none; }
+
+.olEpisodes li:last-child {
+  border-bottom: 1px solid black; }
 
 .buttons {
   margin-left: 1%; }

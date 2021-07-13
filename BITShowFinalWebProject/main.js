@@ -1,7 +1,5 @@
-var input = $("#inputField");
-var gallery = $(".gallery");
-
 function showTop50() {
+    var gallery = $(".gallery");
 
     var showTop50Request = new XMLHttpRequest;
 

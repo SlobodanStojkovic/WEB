@@ -28,15 +28,24 @@ function getShowDetails() {
     imageDescrRequest.onload = function () {
         if (imageDescrRequest.status >= 200 && imageDescrRequest.status < 300) {
 
-            var response4 = JSON.parse(imageDescrRequest.responseText);
+            var imageDescrResponse = JSON.parse(imageDescrRequest.responseText);
 
-            var image = response4.image.original;
-            var description = response4.summary;
+            if (imageDescrResponse.image == null) {
+                var image = $("<img>");
 
-            var $img = $("<img>");
-            $img.attr("src", image);
-            $main.prepend($img);
+                image.attr("src", "./assets/imagePlaceholder.jpg");
+                image.attr("alt", "imagePlaceholder");
+                $main.prepend(image);
+            } else {
+                var image = imageDescrResponse.image.original;
 
+                var $img = $("<img>");
+                $img.attr("src", image);
+                $img.attr("alt", showName);
+                $main.prepend($img);
+            }
+
+            var description = imageDescrResponse.summary;
             $(description).insertAfter($showDetails);
         }
     };
@@ -44,8 +53,8 @@ function getShowDetails() {
     seasonsRequest.onload = function () {
         if (seasonsRequest.status >= 200 && seasonsRequest.status < 300) {
 
-            var response5 = JSON.parse(seasonsRequest.responseText);
-            var numberOfSeasons = response5.length;
+            var seasonsResponse = JSON.parse(seasonsRequest.responseText);
+            var numberOfSeasons = seasonsResponse.length;
             $("#h3Seasons").html(`Seasons (${numberOfSeasons})`);
 
             var $ul = $("<ul class='seasons col12'>");
@@ -53,31 +62,48 @@ function getShowDetails() {
             $("#h3Seasons").after($ul);
 
             for (var i = numberOfSeasons - 1; i >= 0; i--) {
-                var seasonStart = response5[i].premiereDate;
-                var seasonEnd = response5[i].endDate;
+                var seasonStart = seasonsResponse[i].premiereDate;
+                var seasonEnd = seasonsResponse[i].endDate;
+
+                if (seasonStart === null) {
+                    seasonStart = "No information about season start";
+                }
+
+                if (seasonEnd === null) {
+                    seasonEnd = "No information about season end";
+                }
 
                 var $li = $("<li>");
                 $li.text(seasonStart + " - " + seasonEnd);
                 $(".seasons").append($li);
             }
+        } else {
+            $("#h3Seasons").text("There is no available data. Please try again.");
         }
     };
 
     castRequest.onload = function () {
         if (castRequest.status >= 200 && castRequest.status < 300) {
 
-            var response6 = JSON.parse(castRequest.responseText);
+            var castResponse = JSON.parse(castRequest.responseText);
 
             var $ul = $("<ul class='cast col12'>");
             $("#h3Cast").after($ul);
 
-            for (var j = 0; j < response6.length; j++) {
-                var actorName = response6[j].person.name;
+            for (var j = 0; j < castResponse.length; j++) {
+                var actorName = castResponse[j].person.name;
 
                 var $li = $("<li>");
                 $li.text(actorName);
                 $(".cast").append($li);
             }
+        }
+
+        if ($(".cast").children().length === 0) {
+            var $p = $("<p>");
+            $p.text("Cast is not available.");
+
+            $("#h3Cast").after($p);
         }
     };
 
@@ -90,23 +116,23 @@ setTimeout(getShowDetails, 500);
 
 
 function getCrew() {
-    var request7 = new XMLHttpRequest();
+    var crewRequest = new XMLHttpRequest();
 
-    var endpoint7 = "http://api.tvmaze.com/shows/" + showId + "/crew";
+    var crewEndpoint = "http://api.tvmaze.com/shows/" + showId + "/crew";
 
-    request7.open("GET", endpoint7);
+    crewRequest.open("GET", crewEndpoint);
 
-    request7.onload = function () {
-        if (request7.status >= 200 && request7.status < 300) {
+    crewRequest.onload = function () {
+        if (crewRequest.status >= 200 && crewRequest.status < 300) {
 
-            var response7 = JSON.parse(request7.responseText);
+            var crewResponse = JSON.parse(crewRequest.responseText);
 
             var olDivCrew = $("<ol class='olCrew'>");
 
             $(".crew").append(olDivCrew);
 
-            for (var k = 0; k < response7.length; k++) {
-                var crewName = response7[k].person.name;
+            for (var k = 0; k < crewResponse.length; k++) {
+                var crewName = crewResponse[k].person.name;
 
                 var liCrew = $("<li>");
                 liCrew.text(crewName);
@@ -120,7 +146,7 @@ function getCrew() {
             }
         }
     };
-    request7.send();
+    crewRequest.send();
 
     $("#getCrew").html("Hide Crew");
     $getCrew.off("click");
@@ -132,23 +158,23 @@ $getCrew.one("click", getCrew);
 
 function getAkas() {
 
-    var request8 = new XMLHttpRequest();
+    var akasRequest = new XMLHttpRequest();
 
-    var endpoint8 = "http://api.tvmaze.com/shows/" + showId + "/akas";
+    var akasEndpoint = "http://api.tvmaze.com/shows/" + showId + "/akas";
 
-    request8.open("GET", endpoint8);
+    akasRequest.open("GET", akasEndpoint);
 
-    request8.onload = function () {
-        if (request8.status >= 200 && request8.status < 300) {
+    akasRequest.onload = function () {
+        if (akasRequest.status >= 200 && akasRequest.status < 300) {
 
-            var response8 = JSON.parse(request8.responseText);
+            var akasResponse = JSON.parse(akasRequest.responseText);
 
             var olDivAkas = $("<ol class='olAkas'>");
 
             $(".akas").append(olDivAkas);
 
-            for (var l = 0; l < response8.length; l++) {
-                var akasName = response8[l].name;
+            for (var l = 0; l < akasResponse.length; l++) {
+                var akasName = akasResponse[l].name;
 
                 var liAkas = $("<li>");
                 liAkas.text(akasName);
@@ -162,7 +188,7 @@ function getAkas() {
             }
         }
     };
-    request8.send();
+    akasRequest.send();
 
     $("#getAkas").html("Hide Akas");
     $getAkas.off("click");
@@ -174,29 +200,28 @@ $getAkas.one("click", getAkas);
 
 function getEpisodes() {
 
-    var request9 = new XMLHttpRequest();
+    var episodesRequest = new XMLHttpRequest();
 
-    var endpoint9 = "http://api.tvmaze.com/shows/" + showId + "/episodes";
+    var episodesEndpoint = "http://api.tvmaze.com/shows/" + showId + "/episodes";
 
-    request9.open("GET", endpoint9);
+    episodesRequest.open("GET", episodesEndpoint);
 
-    request9.onload = function () {
-        if (request9.status >= 200 && request9.status < 300) {
+    episodesRequest.onload = function () {
+        if (episodesRequest.status >= 200 && episodesRequest.status < 300) {
 
-            var response9 = JSON.parse(request9.responseText);
+            var episodesResponse = JSON.parse(episodesRequest.responseText);
 
             var olDivEpisodes = $("<ol class='olEpisodes'>");
 
             $(".episodes").append(olDivEpisodes);
 
-            for (var m = 0; m < response9.length; m++) {
-                var episodeName = response9[m].name;
+            for (var m = 0; m < episodesResponse.length; m++) {
+                var episodeName = episodesResponse[m].name;
 
                 var liEpisode = $("<li>");
                 liEpisode.text(episodeName);
                 $(".olEpisodes").append(liEpisode);
             }
-
 
             if ($(".olEpisodes").children().length < 1) {
                 var liEpisode = $("<li>");
@@ -205,7 +230,7 @@ function getEpisodes() {
             }
         }
     };
-    request9.send();
+    episodesRequest.send();
 
     $("#getEpisodes").html("Hide Episodes");
     $getEpisodes.off("click");
