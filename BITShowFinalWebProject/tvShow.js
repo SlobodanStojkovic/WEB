@@ -33,7 +33,7 @@ function getShowDetails() {
             if (imageDescrResponse.image == null) {
                 var image = $("<img>");
 
-                image.attr("src", "./assets/imagePlaceholder.jpg");
+                image.attr("src", "./assets/imagePlaceholder.png");
                 image.attr("alt", "imagePlaceholder");
                 $main.prepend(image);
             } else {

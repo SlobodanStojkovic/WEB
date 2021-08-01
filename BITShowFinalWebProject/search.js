@@ -1,5 +1,6 @@
 var input = $("#inputField");
 var gallery = $(".gallery");
+var h1 = $("h1");
 
 function searchForShow() {
 
@@ -11,13 +12,13 @@ function searchForShow() {
 
     searchShowRequest.onload = function () {
         if (searchShowRequest.status >= 200 && searchShowRequest.status < 300) {
-            var response2 = JSON.parse(searchShowRequest.responseText);
+            var searchShowResponse = JSON.parse(searchShowRequest.responseText);
 
             $("#searchOptions").empty();    //this empties all the options from search list
 
-            for (var j = 0; j < response2.length && j < 10; j++) {
-                var searchResult = response2[j].show.name;
-                var searchedShowId = response2[j].show.id;
+            for (var j = 0; j < searchShowResponse.length && j < 10; j++) {
+                var searchResult = searchShowResponse[j].show.name;
+                var searchedShowId = searchShowResponse[j].show.id;
 
                 var liOption = $("<li>");
                 liOption.text(searchResult);
@@ -41,74 +42,81 @@ function searchForShow() {
 }
 input.keyup(searchForShow);
 
+function showSearched() {
 
-/* If we want that in search menu after we type something and hit enter it displays us TV shows that correspond search query, we will insert this piece of code */
+    var showSearchedRequest = new XMLHttpRequest;
 
-/*
+    var showSearchedEndpoint = "http://api.tvmaze.com/search/shows?q=" + input.val();
+
+    showSearchedRequest.open("GET", showSearchedEndpoint);
+
+    gallery.empty();
+    h1.empty();
+    $(".buttons").empty();
+    $(".crewAkasEpisodes").empty();
+
+    showSearchedRequest.onload = function () {
+        if (showSearchedRequest.status >= 200 && showSearchedRequest.status < 300) {
+            var showSearchedResponse = JSON.parse(showSearchedRequest.responseText);
+
+            for (let i = 0; i < showSearchedResponse.length; i++) {
+
+                var name = showSearchedResponse[i].show.name;
+
+                if (showSearchedResponse[i].show.image != null) {
+                    var image = showSearchedResponse[i].show.image.medium;
+                } else {
+                    var image = "./assets/imagePlaceholder.png";   //image placeholder
+                }
+
+                var showId = showSearchedResponse[i].show.id;
+
+                var $div = $("<div class='show col-4 p-3'>");
+                gallery.append($div);
+
+                var $img = $("<img>");
+                $img.attr("src", image);
+                $img.attr("class", showId);
+                $img.attr("alt", name);
+                $div.append($img);
+
+                var $a = $("<a>");
+                $a.addClass("userLink");
+                $a.attr("href", "./tvShow.html");
+                $a.attr("target", "_blank");
+                $a.attr("id", showId);
+                $a.text(name);
+
+                $div.append($a);
+            }
+
+            $("a").click(function () {
+                var showName = $(this).text();
+                var showId = $(this).attr("id");
+
+                localStorage.setItem("1", showName);
+                localStorage.setItem("2", showId);
+            })
+
+            $("img").click(function () {
+                var showName = $(this).attr("alt");
+                var showId = $(this).attr("class");
+
+                localStorage.setItem("1", showName);
+                localStorage.setItem("2", showId);
+                window.location.replace("tvShow.html");
+            })
+        }
+    }
+    showSearchedRequest.send();
+}
+
+
 input.keypress(function (e) {
     if (e.which == 13) {
 
         e.preventDefault();
 
-        function showSearched() {
-
-            var showSearchedRequest = new XMLHttpRequest;
-
-            var showSearchedEndpoint = "http://api.tvmaze.com/search/shows?q=" + input.val();
-
-            showSearchedRequest.open("GET", showSearchedEndpoint);
-
-            gallery.empty();
-
-            showSearchedRequest.onload = function () {
-                if (showSearchedRequest.status >= 200 && showSearchedRequest.status < 300) {
-                    var response3 = JSON.parse(showSearchedRequest.responseText);
-
-                    for (let i = 0; i < response3.length; i++) {
-
-                        var name = response3[i].show.name;
-                        var image = response3[i].show.image.medium;
-                        var showId = response3[i].show.id;
-
-                        var $div = $("<div class='show col-4 p-3'>");
-                        gallery.append($div);
-
-                        var $img = $("<img>");
-                        $img.attr("src", image);
-                        $img.attr("class", showId);
-                        $img.attr("alt", name);
-                        $div.append($img);
-
-                        var $a = $("<a>");
-                        $a.addClass("userLink");
-                        $a.attr("href", "./tvShow.html");
-                        $a.attr("target", "_blank");
-                        $a.attr("id", showId);
-                        $a.text(name);
-
-                        $div.append($a);
-                    }
-
-                    $("a").click(function () {
-                        var showName = $(this).text();
-                        var showId = $(this).attr("id");
-
-                        localStorage.setItem("1", showName);
-                        localStorage.setItem("2", showId);
-                    })
-
-                    $("img").click(function () {
-                        var showName = $(this).attr("alt");
-                        var showId = $(this).attr("class");
-
-                        localStorage.setItem("1", showName);
-                        localStorage.setItem("2", showId);
-                        window.location.replace("tvShow.html");
-                    })
-                }
-            }
-            showSearchedRequest.send();
-        }
         showSearched();
     }
-}); */
+});
