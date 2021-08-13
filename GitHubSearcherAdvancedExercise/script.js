@@ -1,6 +1,6 @@
 var $search = $("#search");
 var $gallery = $(".gallery");
-
+var $logo = $(".logo");
 
 $search.keypress(function (event) {
 
@@ -17,6 +17,7 @@ $search.keypress(function (event) {
             if (newXML.status >= 200 && newXML.status < 300) {
 
                 var response = JSON.parse(newXML.responseText);
+                console.log(response);
                 var searchedUsers = response.items;
 
                 for (var i = 0; i < searchedUsers.length; i++) {
@@ -28,19 +29,17 @@ $search.keypress(function (event) {
                     var userImg = searchedUsers[i].avatar_url;
                     var username = searchedUsers[i].login;
 
-                    var $img = document.createElement("img");
-                    $img.setAttribute("src", userImg);
-                    userDiv.append($img);
-
                     var $a = $("<a>");
                     $a.addClass("userLink");
-                    $a[0].setAttribute("href", "./newPage.html");
+                    $a.attr("href", "./newPage.html");
                     $("a").attr("target", "_blank");
-                    userDiv.append($a[0]);
+                    $a.text(username);
 
-                    var $p = $("<p>");
-                    $p.text(username);
-                    $p.appendTo($a[0]);
+                    var $img = document.createElement("img");
+                    $img.setAttribute("src", userImg);
+                    $a.prepend($img);
+
+                    userDiv.append($a[0]);
 
                     $search.val("");    //this will after we click for search clear input field
                 }
@@ -50,15 +49,23 @@ $search.keypress(function (event) {
 
         function getUserDetails() {
 
-            $("a").click(function () {
-                index = $(this).index("a");
-                localStorage.setItem("1", index);
+            function getUserOnClick() {
+                var $person = $(this).text();
+                localStorage.setItem("1", $person);
+                console.log($person)
+            }
 
-                var $person2 = $("a")[index].firstChild.innerHTML;
-                localStorage.setItem("2", $person2);
-            });
+            $("a").click(getUserOnClick);
+
+            $("img").click(getUserOnClick);
         }
         setTimeout(getUserDetails, 1000);
     }
 });
+
+function backToHomePage() {
+    window.location.href = "index.html"
+}
+
+$logo.click(backToHomePage);
 

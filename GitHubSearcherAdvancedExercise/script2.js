@@ -1,15 +1,9 @@
-var index = localStorage.getItem("1", index);
-localStorage.removeItem("1");
-
-var $person2 = localStorage.getItem("2", $person2);
-$("#userName").text($person2);
-localStorage.removeItem("2");
-
-
+var $person = localStorage.getItem("1", $person);
+$("#userName").text($person);
 
 var newXML2 = new XMLHttpRequest();
 
-var endpoint2 = "https://api.github.com/users/" + $person2 + "/repos?page=2&per_page=100";
+var endpoint2 = "https://api.github.com/users/" + $person + "/repos?page=2&per_page=100";
 
 newXML2.open("GET", endpoint2);
 
