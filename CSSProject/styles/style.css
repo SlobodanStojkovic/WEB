@@ -55,7 +55,6 @@ MOBILE VERSION
 =============================================================================
 */
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -82,14 +81,14 @@ Header and Nav Section
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
-    color: rgb(117,117,117);
+    color: rgb(117, 117, 117);
 }
 
 .logo span {
-    border: 4px solid rgb(117,117,117);
+    border: 4px solid rgb(117, 117, 117);
     border-right: none;
     padding-left: 10px;
-    color: rgb(255,152,1);  
+    color: rgb(255, 152, 1);
 }
 
 nav ul li a {
@@ -100,7 +99,7 @@ nav ul li a {
 nav ul {
     list-style: none;
     text-align: center;
-    background-color: rgb(127,194,247);
+    background-color: rgb(127, 194, 247);
     margin: 20px;
 }
 
@@ -115,12 +114,11 @@ ul li a:hover {
 }
 
 nav ul li:hover a {
-    color:rgb(127,194,247);
+    color: rgb(127, 194, 247);
 }
 
 nav ul li:hover {
     background-color: white;
-    width: 100%;
 }
 
 header {
@@ -129,7 +127,7 @@ header {
 }
 
 h1 {
-    color: rgb(238,238,238);
+    color: rgb(238, 238, 238);
     text-transform: uppercase;
     font-size: 1.5em;
 }
@@ -158,15 +156,17 @@ header img {
     left: 25%;
     top: 20px;
     padding: 10px 40px;
-    background-color: rgb(20,110,180);
+    background-color: rgb(20, 110, 180);
     color: white;
     border-radius: 16px;
 }
+
 /* 
 ============================================================================= 
 Main section 
 ============================================================================= 
 */
+
 h2 {
     text-align: center;
     font-size: 30px
@@ -190,7 +190,7 @@ h3 {
     text-transform: none;
     padding: 10px;
     margin: 10px;
-    color: rgb(121,122,123);
+    color: rgb(121, 122, 123);
     text-align: left;
 }
 
@@ -213,14 +213,13 @@ h3 {
     width: 100%;
 }
 
-
 .wemakeyourdreamlist {
     background-color: white;
     list-style-image: url(../Assets/icons/arrow_bullet.png);
     text-transform: none;
     padding: 10px;
     margin: 10px;
-    color: rgb(121,122,123);
+    color: rgb(121, 122, 123);
     text-align: left;
 }
 
@@ -240,7 +239,7 @@ h3 {
 }
 
 .whatpeoplesays {
-    background-color: rgb(127,194,247);
+    background-color: rgb(127, 194, 247);
     margin: 30px 15px;
 }
 
@@ -255,7 +254,7 @@ h3 {
 }
 
 .whatpeoplesays h5 {
-    padding-top: 7%;    
+    padding-top: 7%;
 }
 
 .profilephoto {
@@ -273,7 +272,6 @@ h3 {
     margin-left: 0;
     margin-top: 2%;
 }
-
 
 .whatpeoplesays p {
     display: inline-block;
@@ -296,6 +294,8 @@ h3 {
 .redcontact {
     background-color: rgb(255, 79, 129);
     width: 50%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .contactus2 {
@@ -310,32 +310,37 @@ h3 {
     width: 50%;
 }
 
-.greencontact > p {
+.greencontact>p {
     position: relative;
     top: 40%;
 }
 
-.greencontact > h4 {
+.greencontact>h4 {
     position: relative;
     top: 40%;
 }
 
-.bluecontact > p {
+.bluecontact>p {
     position: relative;
     top: 40%;
 }
 
-.bluecontact > h4 {
+.bluecontact>h4 {
     position: relative;
     top: 40%;
 }
 
-.redcontact > img {
+.redcontact>img {
     position: relative;
     top: 40%;
 }
 
-.redcontact > h4 {
+.redcontact>h4 {
+    position: relative;
+    top: 40%;
+}
+
+.redcontact>span {
     position: relative;
     top: 40%;
 }
@@ -351,7 +356,7 @@ h3 {
 }
 
 .houseimg {
-    display:inline-block;
+    display: inline-block;
     width: 70%;
     height: 200px;
 }
@@ -368,7 +373,7 @@ iframe {
     margin: 1%;
 }
 
-.bluecontact > p {
+.bluecontact>p {
     padding: 3%;
 }
 
@@ -392,13 +397,12 @@ Footer
 ============================================================================= 
 */
 
-
 footer {
     background-color: rgb(33, 33, 33);
     height: 200px;
 }
 
-.footerlist li a{
+.footerlist li a {
     text-decoration: none;
     color: white;
     list-style-type: none;
@@ -427,272 +431,225 @@ footer {
 TABLET
 ============================================================================= 
 */
+
 @media only screen and (min-width: 768px) {
-
-
-/*
+    /*
 ============================================================================= 
 Header and Nav Section - Tablet
 =============================================================================  
 */
-
-header {
-    position: relative;
-}
-
-.header-absolute {
-    top: 44%;
-    left: 7%;
-    font-size: 1.7em;
-    width: 80%;
-    text-align: center;
-}
-
-.read-more {
-    left: 0%;
-}
-
-.logo {
-    position: absolute;
-    top:20px;
-    left: 5%;
-    z-index: 999;
-    color: white;
-}
-
-.logo span {
-    border-color: white;
-}
-
-nav ul li {
-    display: inline-block;
-    width: fit-content;
-    margin: 10px;
-    padding: 0;
-}
-
-.main-list {
-    right: 1%;
-    font-weight: bold;
-}
-
-nav ul  {
-    background-color: transparent;
-    float: right;
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    z-index: 999;
-}
-
-nav ul li:hover {
-    background-color: transparent;
-}
-
-nav ul li:hover a {
-    color: black;
-}
-
-.clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.bannerimg {
-    width: 100%;
-}
-
-/* 
+    header {
+        position: relative;
+    }
+    .header-absolute {
+        top: 44%;
+        left: 7%;
+        font-size: 1.7em;
+        width: 80%;
+        text-align: center;
+    }
+    .read-more {
+        left: 0%;
+    }
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 5%;
+        z-index: 999;
+        color: white;
+    }
+    .logo span {
+        border-color: white;
+    }
+    nav ul li {
+        display: inline-block;
+        width: fit-content;
+        margin: 10px;
+        padding: 0;
+    }
+    .main-list {
+        right: 1%;
+        font-weight: bold;
+    }
+    nav ul {
+        background-color: transparent;
+        float: right;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        z-index: 999;
+    }
+    nav ul li:hover {
+        background-color: transparent;
+    }
+    nav ul li:hover a {
+        color: black;
+    }
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .bannerimg {
+        width: 100%;
+    }
+    /* 
 ============================================================================= 
 Main section - Tablet
 ============================================================================= 
 */
-
-.welcometo > h2 {
-    margin-top: 5%;
-}
-
-.buildestate {
-    width: 45%;
-    float: left;
-    margin-left: 5%;
-    padding-right: 2%;
-}
-
-.curvywalls {
-    width: 45%;
-}
-
-.whatpeoplesays {
-    width: 35%;
-    float: left;
-}
-
-.wemakeyourdream {
-    margin-left: 5%;
-    margin-right: 5%;
-} 
-
-.whatpeopleh2 {
-    margin-top: 7%;
-}
-
-h5 {
-    margin-top: 1%;
-}
-
-.contactus1 {
-    width: 100%;
-}
-
-.profilephoto {
-    padding: 1px;
-    border: 1px solid white;
-}
-
-.getinh2 {
-    width: 100%;
-    clear:both;
-}
-
-.williamson, .selena {
-    margin-left: 13.5%;
-}
-
-.williamson, .jennifer {
-    margin-bottom: 2%;
-}
-
-.selena {
-    margin-top: 0%;
-    margin-bottom: 8%;
-}
-
-.inputname, .inputemail, .inputtelephone {
-    width: 27.2%;
-}
-
-.inputname {
-    margin-left: 10%;
-}
-
-.inputmessage {
-    width: 86%;
-    margin-left: 10%;
-}
-
-.submitbutton {
-    margin-left: 10%;
-}
-
-/* 
+    .welcometo>h2 {
+        margin-top: 5%;
+    }
+    .buildestate {
+        width: 45%;
+        float: left;
+        margin-left: 5%;
+        padding-right: 2%;
+    }
+    .curvywalls {
+        width: 45%;
+    }
+    .whatpeoplesays {
+        width: 35%;
+        float: left;
+    }
+    .wemakeyourdream {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .whatpeopleh2 {
+        margin-top: 7%;
+    }
+    h5 {
+        margin-top: 1%;
+    }
+    .contactus1 {
+        width: 100%;
+    }
+    .profilephoto {
+        padding: 1px;
+        border: 1px solid white;
+    }
+    .getinh2 {
+        width: 100%;
+        clear: both;
+    }
+    .williamson, .selena {
+        margin-left: 13.5%;
+    }
+    .williamson, .jennifer {
+        margin-bottom: 2%;
+    }
+    .selena {
+        margin-top: 0%;
+        margin-bottom: 8%;
+    }
+    .inputname, .inputemail, .inputtelephone {
+        width: 27.2%;
+    }
+    .inputname {
+        margin-left: 10%;
+    }
+    .inputmessage {
+        width: 86%;
+        margin-left: 10%;
+    }
+    .submitbutton {
+        margin-left: 10%;
+    }
+    /* 
 ============================================================================= 
 Footer - Tablet
 ============================================================================= 
 */
 }
+
 /* 
 =============================================================================  
 LARGE SCREENS 
 ============================================================================= 
 */
+
 @media only screen and (min-width: 1200px) {
-/*
+    /*
 ============================================================================= 
 Header and Nav Section - Large screens
 =============================================================================  
 */
-.logo {
-    left: 4%;
-}
-
-.header-absolute {
-    top: 44%;
-    left: 5%;
-    font-size: 1.9em;
-    text-align: center;
-    width: 90%;
-}
-
-.welcometo > h2 {
-    margin-top: 7%;
-}
-
-.read-more {
-    left: 0%;
-}
-/* 
+    .logo {
+        left: 4%;
+    }
+    .header-absolute {
+        top: 44%;
+        left: 5%;
+        font-size: 1.9em;
+        text-align: center;
+        width: 90%;
+    }
+    .welcometo>h2 {
+        margin-top: 7%;
+    }
+    .read-more {
+        left: 0%;
+    }
+    /* 
 ============================================================================= 
 Main section - Large screens 
 ============================================================================= 
 */
-
-.buildestate {
-    margin-left: 7%;
-    margin-right: 1%
-}
-
-.wemakeyourdream {
-    margin-left: 1%;
-    margin-right: 7%;
-}
-
-.welcometo, .curvywalls, .wemakeyourdream, .curvy {
-    display: inline-block;
-}
-
-.curvy {
-    width: 30%;
-    float: left;
-}
-
-.curvywalls {
-    width: 100%;
-    float: both;
-}
-
-.buildestate {
-    width: 27%;
-    float: left;
-}
-
-.wemakeyourdream {
-    width: 27%;
-    float: left;
-    margin-left: 1%;
-}
-
-.whatpeoplesays {
-    width: 30%;
-    margin: 0;
-    margin-left: 3%;
-    padding-bottom: 5%;
-}
-
-.contactus1, .contactus2 {
-    width: 50%;
-    float: left;
-}
-
-.profilephoto {
-    padding: 1px;
-    border: 1px solid white;
-}
-
-.whatpeoplesays .profilephoto {
-    margin-left: 7%;
-}
-
-.whatpeoplesays > p {
-    margin-left: 4%;
-}
-
-.getinh2 {
-    margin-top: 23%;
-}
-
-/* 
+    .buildestate {
+        margin-left: 7%;
+        margin-right: 1%
+    }
+    .wemakeyourdream {
+        margin-left: 1%;
+        margin-right: 7%;
+    }
+    .welcometo, .curvywalls, .wemakeyourdream, .curvy {
+        display: inline-block;
+    }
+    .curvy {
+        width: 30%;
+        float: left;
+    }
+    .curvywalls {
+        width: 100%;
+        float: both;
+    }
+    .buildestate {
+        width: 27%;
+        float: left;
+    }
+    .wemakeyourdream {
+        width: 27%;
+        float: left;
+        margin-left: 1%;
+    }
+    .whatpeoplesays {
+        width: 30%;
+        margin: 0;
+        margin-left: 3%;
+        padding-bottom: 5%;
+    }
+    .contactus1, .contactus2 {
+        width: 50%;
+        float: left;
+    }
+    .profilephoto {
+        padding: 1px;
+        border: 1px solid white;
+    }
+    .whatpeoplesays .profilephoto {
+        margin-left: 7%;
+    }
+    .whatpeoplesays>p {
+        margin-left: 4%;
+    }
+    .getinh2 {
+        margin-top: 23%;
+    }
+    /* 
 ============================================================================= 
 Footer - Large screens 
 ============================================================================= 

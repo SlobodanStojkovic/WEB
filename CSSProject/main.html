@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/style.css">
     <title>CSS Project</title>
 </head>
 
 <body>
-    <div class="logo"><span>BUILD</span> ESTATE</div>
-    <nav class="clearfix navigation">
-        <ul class="main-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </nav>
     <header>
+        <div class="logo"><span>BUILD</span> ESTATE</div>
+        <nav class="clearfix navigation">
+            <ul class="main-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contactUs">Contact Us</a></li>
+            </ul>
+        </nav>
+
         <img src="./assets/images/banner3.jpg" alt="Banner image" class="banner-img">
         <div class="header-absolute">
             <h1>We shape our buildings thereafter they shape us</h1>
             <button class="read-more"><a href="#wemake">Read More</a></button>
         </div>
+
     </header>
     <main>
         <section class="welcometo">
@@ -41,11 +46,11 @@
                     <li>Best Design Architecture.</li>
                 </ul>
             </article>
-            <article class="curvy">
+            <article class="curvy" id="about">
                 <img src="./assets/images/about.jpg" alt="About image" class="curvywalls">
             </article>
             <article id="wemake" class="wemakeyourdream">
-                <h3>We Make Your Dream Home</h3>
+                <h3 id="services">We Make Your Dream Home</h3>
                 <p>"For decades engineers have stood accused that their buildings do not have any cultural value. We
                     have attempted to liberate engineering of this accusation."</p>
                 <ul class="wemakeyourdreamlist">
@@ -62,47 +67,50 @@
             <article class="whatpeoplesays williamson">
                 <img class="profilephoto" src="./assets/images/t1.jpg" alt="profilephoto1">
                 <h5>WILLIAMSON</h4>
-                <img class="stars" src="./assets/icons/4.5-star-rating.png" alt="Four and a half stars">
-                <p>Nam tempus lobortis sem non ornare. Curabitur dignissim interdum sem, et mollis lorem. Mauris
-                    hendrerit, mi in aliquet egestas, nisi mi turpis.</p>
+                    <img class="stars" src="./assets/icons/4.5-star-rating.png" alt="Four and a half stars">
+                    <p>Nam tempus lobortis sem non ornare. Curabitur dignissim interdum sem, et mollis lorem. Mauris
+                        hendrerit, mi in aliquet egestas, nisi mi turpis.</p>
             </article>
             <article class="whatpeoplesays jennifer">
                 <img class="profilephoto" src="./assets/images/t2.jpg" alt="profilephoto2">
                 <h5>JENNIFER LOPEZ</h4>
-                <img class="stars" src="./assets/icons/4.5-star-rating.png" alt="Four and a half stars">
-                <p>Nam tempus lobortis sem non ornare. Curabitur dignissim interdum sem, et mollis lorem. Mauris
-                    hendrerit, mi in aliquet egestas, nisi mi turpis.</p>
+                    <img class="stars" src="./assets/icons/4.5-star-rating.png" alt="Four and a half stars">
+                    <p>Nam tempus lobortis sem non ornare. Curabitur dignissim interdum sem, et mollis lorem. Mauris
+                        hendrerit, mi in aliquet egestas, nisi mi turpis.</p>
             </article>
             <article class="whatpeoplesays selena">
                 <img class="profilephoto" src="./assets/images/t3.jpg" alt="profilephoto3">
                 <h5>SELENA GOMEZ</h4>
-                <img class="stars" src="./assets/icons/4.5-star-rating.png" alt="Four and a half stars">
-                <p>Nam tempus lobortis sem non ornare. Curabitur dignissim interdum sem, et mollis lorem. Mauris
-                    hendrerit, mi in aliquet egestas, nisi mi turpis.</p>
+                    <img class="stars" src="./assets/icons/4.5-star-rating.png" alt="Four and a half stars">
+                    <p>Nam tempus lobortis sem non ornare. Curabitur dignissim interdum sem, et mollis lorem. Mauris
+                        hendrerit, mi in aliquet egestas, nisi mi turpis.</p>
             </article>
         </section>
         <section>
-            <h2 class="getinh2">Get In Touch With Us</h2>
+            <h2 class="getinh2" id="contactUs">Get In Touch With Us</h2>
             <img class="divider" src="./assets/images/dividerLineWithSquare.png" alt="DividerLine">
             <div class="contactus1">
                 <article class="greencontact">
                     <h4>CONTACT US</h4>
-                    <p><img class="icon" src="./assets/icons/phone.png" alt="Phone icon"> +0(12) 000 123 3120</p>
-                    <p><img class="icon" src="./assets/icons/email.jpg" alt="Email icon"> mail@example.com</p>
+                    <p><i class="fas fa-mobile-alt"></i> +0(12) 000 123 3120</p>
+                    <p><i class="far fa-envelope"></i> mail@example.com</p>
                 </article>
                 <article class="redcontact">
+
                     <h4>CONNECT US</h4>
-                    <img class="icon" src="./assets/icons/facebook.jpg" alt="Facebook icon">
-                    <img class="icon" src="./assets/icons/twitter.png" alt="Twitter icon">
-                    <img class="icon" src="./assets/icons/wifi.jpg" alt="Wifi icon">
-                    <img class="icon" src="./assets/icons/WK.jpg" alt="WK icon">
+
+                    <span><i class="icon fab fa-facebook-f"></i></span>
+                    <span><i class="icon fab fa-twitter"></i></span>
+                    <span><i class="fab fa-linkedin-in"></i></span>
+
                 </article>
             </div>
             <div class="contactus2">
                 <article class="bluecontact">
                     <h4>ADDRESS</h4>
                     <p>
-                       <img class="icon" src="./assets/icons/location.png" alt="Location"> 1680 Richmond St, Corner in, ON N58 3d7, <br> USA
+                        <i class="fas fa-map-marker-alt"></i> 1680 Richmond St, Corner in,
+                        ON N58 3d7, <br> USA
                     </p>
                 </article>
 
